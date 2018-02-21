@@ -27,8 +27,6 @@ Grid point unknown&#xD;
     <packagedElement xmi:type="uml:UseCase" xmi:id="_znnXwBcPEei7ipzadJJ7oA" name="Stop mission">
       <include xmi:type="uml:Include" xmi:id="_f-jJoBcTEei7ipzadJJ7oA" addition="_o2msQBcPEei7ipzadJJ7oA"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Actor" xmi:id="_0kq14BcPEei7ipzadJJ7oA" name="Operator"/>
-    <packagedElement xmi:type="uml:Actor" xmi:id="_0wWhcBcPEei7ipzadJJ7oA" name="CopyOf_Operator_1"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_4kPp0BcPEei7ipzadJJ7oA" name="Operator"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_54aAYBcPEei7ipzadJJ7oA" memberEnd="_54ancRcPEei7ipzadJJ7oA _54anchcPEei7ipzadJJ7oA">
@@ -53,11 +51,11 @@ Grid point unknown&#xD;
     <ownedEnd xmi:type="uml:Property" xmi:id="_83luUhcPEei7ipzadJJ7oA" name="receive photo grid point" type="_uR_W4BcPEei7ipzadJJ7oA" association="_83lHQBcPEei7ipzadJJ7oA"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_83luUxcPEei7ipzadJJ7oA" name="central station" type="_6VRikBcPEei7ipzadJJ7oA" association="_83lHQBcPEei7ipzadJJ7oA"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_ZGyAkBcTEei7ipzadJJ7oA" memberEnd="_ZGynohcTEei7ipzadJJ7oA _ZGzOsBcTEei7ipzadJJ7oA">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZGynoBcTEei7ipzadJJ7oA" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZGynoRcTEei7ipzadJJ7oA" key="nature" value="UML_Nature"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_0YoqYBciEeiUNKIKmaHfbA" memberEnd="_0YrGoBciEeiUNKIKmaHfbA _0YrtsBciEeiUNKIKmaHfbA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0YqfkBciEeiUNKIKmaHfbA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0YqfkRciEeiUNKIKmaHfbA" key="nature" value="UML_Nature"/>
     </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_ZGynohcTEei7ipzadJJ7oA" name="central station" type="_6VRikBcPEei7ipzadJJ7oA" association="_ZGyAkBcTEei7ipzadJJ7oA"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_ZGzOsBcTEei7ipzadJJ7oA" name="stop mission" type="_znnXwBcPEei7ipzadJJ7oA" association="_ZGyAkBcTEei7ipzadJJ7oA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_0YrGoBciEeiUNKIKmaHfbA" name="central station" type="_6VRikBcPEei7ipzadJJ7oA" association="_0YoqYBciEeiUNKIKmaHfbA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_0YrtsBciEeiUNKIKmaHfbA" name="stop mission" type="_znnXwBcPEei7ipzadJJ7oA" association="_0YoqYBciEeiUNKIKmaHfbA"/>
   </packagedElement>
 </uml:Model>

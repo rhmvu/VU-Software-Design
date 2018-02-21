@@ -23,13 +23,6 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_X_PDUBcLEei7ipzadJJ7oA" name="start rovu mission" type="_Ufov8BcLEei7ipzadJJ7oA" association="_X_LY8BcLEei7ipzadJJ7oA"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_X_PqYBcLEei7ipzadJJ7oA" name="operator" type="_IAg80BcLEei7ipzadJJ7oA" association="_X_LY8BcLEei7ipzadJJ7oA"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_pOOpcBcMEei7ipzadJJ7oA" memberEnd="_pOP3kRcMEei7ipzadJJ7oA _pOP3khcMEei7ipzadJJ7oA">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pOPQgBcMEei7ipzadJJ7oA" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pOP3kBcMEei7ipzadJJ7oA" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_pOP3kRcMEei7ipzadJJ7oA" name="give robot direction" type="_pvFwQBcLEei7ipzadJJ7oA" association="_pOOpcBcMEei7ipzadJJ7oA"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_pOP3khcMEei7ipzadJJ7oA" name="central station" type="_P62WIBcLEei7ipzadJJ7oA" association="_pOOpcBcMEei7ipzadJJ7oA"/>
-  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_8ahfMBcMEei7ipzadJJ7oA" memberEnd="_8aiGQRcMEei7ipzadJJ7oA _8aiGQhcMEei7ipzadJJ7oA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8ahfMRcMEei7ipzadJJ7oA" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8aiGQBcMEei7ipzadJJ7oA" key="nature" value="UML_Nature"/>
@@ -43,5 +36,12 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_xFj8ohcNEei7ipzadJJ7oA" name="usecase1" type="_rtg54BcNEei7ipzadJJ7oA" association="_xFjVkBcNEei7ipzadJJ7oA"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_xFj8oxcNEei7ipzadJJ7oA" name="central station" type="_P62WIBcLEei7ipzadJJ7oA" association="_xFjVkBcNEei7ipzadJJ7oA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_gqLtUBcjEeiUNKIKmaHfbA" memberEnd="_gqMUYRcjEeiUNKIKmaHfbA _gqMUYhcjEeiUNKIKmaHfbA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gqLtURcjEeiUNKIKmaHfbA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gqMUYBcjEeiUNKIKmaHfbA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_gqMUYRcjEeiUNKIKmaHfbA" name="central station" type="_P62WIBcLEei7ipzadJJ7oA" association="_gqLtUBcjEeiUNKIKmaHfbA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_gqMUYhcjEeiUNKIKmaHfbA" name="give robot direction" type="_pvFwQBcLEei7ipzadJJ7oA" association="_gqLtUBcjEeiUNKIKmaHfbA"/>
   </packagedElement>
 </uml:Model>
