@@ -4,9 +4,11 @@
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Package" xmi:id="_kRneIBcPEei7ipzadJJ7oA" name="ROVU System">
-    <ownedComment xmi:type="uml:Comment" xmi:id="_pbW3wBcSEei7ipzadJJ7oA" annotatedElement="_BSInABcQEei7ipzadJJ7oA">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_pbW3wBcSEei7ipzadJJ7oA" annotatedElement="_7yhY8BlaEeilEZtsbGMLeA">
       <body>Condition:&#xD;
-Grid point unknown&#xD;
+Grid point is physically visited &#xD;
+by robot for the first time.&#xD;
+&#xD;
 </body>
     </ownedComment>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_nzVRYBcPEei7ipzadJJ7oA" name="Start Rovu mission"/>
@@ -16,13 +18,14 @@ Grid point unknown&#xD;
         <extendedCase xmi:type="uml:UseCase" href="src/Environment/Environment.uml#_rPxqcBcMEei7ipzadJJ7oA"/>
         <extensionLocation xmi:type="uml:ExtensionPoint" href="src/Environment/Environment.uml#_5TCJ0BcMEei7ipzadJJ7oA"/>
       </extend>
-      <extend xmi:type="uml:Extend" xmi:id="_BSInABcQEei7ipzadJJ7oA" extendedCase="_uR_W4BcPEei7ipzadJJ7oA" extensionLocation="_BSJOEBcQEei7ipzadJJ7oA"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_7ylqYBlaEeilEZtsbGMLeA" name="ExtensionPoint1"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_-r8dIBlaEeilEZtsbGMLeA" name="Grid point is a visited"/>
     </packagedElement>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_uR_W4BcPEei7ipzadJJ7oA" name="Process photo ">
+      <extend xmi:type="uml:Extend" xmi:id="_7yhY8BlaEeilEZtsbGMLeA" extendedCase="_s8HJEBcPEei7ipzadJJ7oA" extensionLocation="_7ylqYBlaEeilEZtsbGMLeA"/>
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_uR_W4RcPEei7ipzadJJ7oA" name="ExtensionPoint1"/>
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_BSJOEBcQEei7ipzadJJ7oA" name="ExtensionPoint2"/>
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_xk5AIBcREei7ipzadJJ7oA" name=""/>
-      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_Fuo8oBcSEei7ipzadJJ7oA" name="Set grid point as visited"/>
     </packagedElement>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_znnXwBcPEei7ipzadJJ7oA" name="Stop mission">
       <include xmi:type="uml:Include" xmi:id="_f-jJoBcTEei7ipzadJJ7oA" addition="_o2msQBcPEei7ipzadJJ7oA"/>
@@ -44,18 +47,18 @@ Grid point unknown&#xD;
     <ownedEnd xmi:type="uml:Property" xmi:id="_75MzchcPEei7ipzadJJ7oA" name="give robot direction" type="_o2msQBcPEei7ipzadJJ7oA" association="_75MMYBcPEei7ipzadJJ7oA"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_75NagBcPEei7ipzadJJ7oA" name="central station" type="_6VRikBcPEei7ipzadJJ7oA" association="_75MMYBcPEei7ipzadJJ7oA"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_83lHQBcPEei7ipzadJJ7oA" memberEnd="_83luUhcPEei7ipzadJJ7oA _83luUxcPEei7ipzadJJ7oA">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_83luUBcPEei7ipzadJJ7oA" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_83luURcPEei7ipzadJJ7oA" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_83luUhcPEei7ipzadJJ7oA" name="receive photo grid point" type="_uR_W4BcPEei7ipzadJJ7oA" association="_83lHQBcPEei7ipzadJJ7oA"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_83luUxcPEei7ipzadJJ7oA" name="central station" type="_6VRikBcPEei7ipzadJJ7oA" association="_83lHQBcPEei7ipzadJJ7oA"/>
-  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_0YoqYBciEeiUNKIKmaHfbA" memberEnd="_0YrGoBciEeiUNKIKmaHfbA _0YrtsBciEeiUNKIKmaHfbA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0YqfkBciEeiUNKIKmaHfbA" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0YqfkRciEeiUNKIKmaHfbA" key="nature" value="UML_Nature"/>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_0YrGoBciEeiUNKIKmaHfbA" name="central station" type="_6VRikBcPEei7ipzadJJ7oA" association="_0YoqYBciEeiUNKIKmaHfbA"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_0YrtsBciEeiUNKIKmaHfbA" name="stop mission" type="_znnXwBcPEei7ipzadJJ7oA" association="_0YoqYBciEeiUNKIKmaHfbA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_zV2uoBlaEeilEZtsbGMLeA" memberEnd="_zV-DYBlaEeilEZtsbGMLeA _zV-qcBlaEeilEZtsbGMLeA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zV7nIBlaEeilEZtsbGMLeA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zV8OMBlaEeilEZtsbGMLeA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_zV-DYBlaEeilEZtsbGMLeA" name="map grid point" type="_s8HJEBcPEei7ipzadJJ7oA" association="_zV2uoBlaEeilEZtsbGMLeA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_zV-qcBlaEeilEZtsbGMLeA" name="central station" type="_6VRikBcPEei7ipzadJJ7oA" association="_zV2uoBlaEeilEZtsbGMLeA"/>
   </packagedElement>
 </uml:Model>
