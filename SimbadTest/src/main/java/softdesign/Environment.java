@@ -16,7 +16,7 @@ public class Environment extends EnvironmentDescription {
 	ArrayList<Wall> walls;
 	int worldSize = 20;
 	public Environment() {
-		
+		walls = new ArrayList<Wall>();
 		// turn on the lights
         this.light1IsOn = true;
         this.light2IsOn = true;

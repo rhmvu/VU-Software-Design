@@ -8,8 +8,8 @@ import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
 
 import com.jogamp.nativewindow.util.Dimension;
-import com.sun.prism.Graphics;
-import com.sun.prism.paint.Color;
+//import com.sun.prism.Graphics;
+//import com.sun.prism.paint.Color;
 
 import javafx.scene.Camera;
 import simbad.demo.ImagerDemo;
