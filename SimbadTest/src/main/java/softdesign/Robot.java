@@ -1,7 +1,11 @@
 package main.java.softdesign;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.text.DecimalFormat;
 
+import javax.imageio.ImageIO;
 import javax.swing.JInternalFrame;
 import javax.swing.JPanel;
 import javax.vecmath.Point3d;
@@ -24,20 +28,19 @@ public class Robot extends Agent {
 	private String currentMode;
 	private RangeSensorBelt sonars, bumpers;
 	private CameraSensor camera;
-	//private double elapsed;
-	//SensorMatrix luminanceMatrix = this.camera.createCompatibleSensorMatrix();
+    private BufferedImage cameraImage;
     
     public Robot(Vector3d position, String name) {
         super(position, name);        
        bumpers = RobotFactory.addBumperBeltSensor(this, 12);
        sonars = RobotFactory.addSonarBeltSensor(this,12); 
        camera = RobotFactory.addCameraSensor(this);
+       cameraImage = camera.createCompatibleImage();
     }
 
     /** This method is called by the simulator engine on reset. */
     public void initBehavior() {
         System.out.println("I exist and my name is " + this.name);
-        //this.elapsed = getLifeTime();
     }
     
     private Vector3d getCurrentCoordinate() {
@@ -106,16 +109,17 @@ public class Robot extends Agent {
     /** This method is call cyclically (20 times per second) by the simulator engine. */
     public void performBehavior() {
     	
-//    	if (getLifeTime() - this.elapsed > 1.0D)
-//        {
-//          this.elapsed = getLifeTime();
-//          this.camera.copyVisionImage(this.luminanceMatrix);
-//        }
     	
     	// move random in every 10th virtual second
     	 if(timeCounter()) {
     		 moveRandom();
-    		 
+    		 camera.copyVisionImage(cameraImage);
+    		 try {
+    			    // retrieve image
+    			    File outputfile = new File("image.png");
+    			    ImageIO.write(cameraImage, "png", outputfile);
+    			} catch (IOException e) {
+    			}
     		 Vector3d currentCoordinate = getCurrentCoordinate();
     		 roundCoordinates(currentCoordinate);
     		 System.out.println(currentCoordinate.toString());
