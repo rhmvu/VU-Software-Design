@@ -35,7 +35,7 @@ public class Main {
         Environment environment = new Environment();
         
         // create two instances of the same example robot
-        Robot robot1 = new Robot(new Vector3d(0, 0, 0), "Robot 1");
+        Robot robot1 = new Robot(new Vector3d(4, 0, 4), "Robot 1");
         Robot robot2 = new Robot(new Vector3d(-4, 0, -4), "Robot 2");
         Robot robot3 = new Robot(new Vector3d(4, 0, -4), "Robot 3");
         Robot robot4 = new Robot(new Vector3d(-4, 0, 4), "Robot 4");
@@ -46,7 +46,7 @@ public class Main {
         environment.add(robot3);
         environment.add(robot4);
         
-        Hashtable<Vector3d, String >worldMap = environment.getCoordinatesInArea();
+        Hashtable<Vector3d, String> worldMap = environment.getCoordinatesInArea();
         
         // here we create an instance of the whole Simbad simulator and we assign the newly created environment 
         Simbad frame = new Simbad(environment, false);

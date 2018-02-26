@@ -8,8 +8,8 @@ import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
 
 import com.jogamp.nativewindow.util.Dimension;
-//import com.sun.prism.Graphics;
-//import com.sun.prism.paint.Color;
+import com.sun.prism.Graphics;
+import com.sun.prism.paint.Color;
 
 import javafx.scene.Camera;
 import simbad.demo.ImagerDemo;
@@ -24,7 +24,7 @@ public class Robot extends Agent {
 	private String currentMode;
 	private RangeSensorBelt sonars, bumpers;
 	private CameraSensor camera;
-	private double elapsed;
+	//private double elapsed;
 	//SensorMatrix luminanceMatrix = this.camera.createCompatibleSensorMatrix();
     
     public Robot(Vector3d position, String name) {
@@ -98,9 +98,9 @@ public class Robot extends Agent {
         }
     }
     
-    public boolean timeIsRight() {
+    public boolean timeCounter() {
     	// do an activity in every 10th virtual second
-    	return this.getCounter() % 10 ==0;
+    	return this.getCounter() % 10 == 0;
     }
 
     /** This method is call cyclically (20 times per second) by the simulator engine. */
@@ -113,7 +113,7 @@ public class Robot extends Agent {
 //        }
     	
     	// move random in every 10th virtual second
-    	 if(timeIsRight()) {
+    	 if(timeCounter()) {
     		 moveRandom();
     		 
     		 Vector3d currentCoordinate = getCurrentCoordinate();
