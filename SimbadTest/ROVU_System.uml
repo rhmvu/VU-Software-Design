@@ -19,7 +19,7 @@ by robot for the first time.&#xD;
         <extensionLocation xmi:type="uml:ExtensionPoint" href="src/Environment/Environment.uml#_5TCJ0BcMEei7ipzadJJ7oA"/>
       </extend>
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_7ylqYBlaEeilEZtsbGMLeA" name="ExtensionPoint1"/>
-      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_-r8dIBlaEeilEZtsbGMLeA" name="Grid point is a visited"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_-r8dIBlaEeilEZtsbGMLeA" name="Take photo visited grid point"/>
     </packagedElement>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_uR_W4BcPEei7ipzadJJ7oA" name="Process photo ">
       <extend xmi:type="uml:Extend" xmi:id="_7yhY8BlaEeilEZtsbGMLeA" extendedCase="_s8HJEBcPEei7ipzadJJ7oA" extensionLocation="_7ylqYBlaEeilEZtsbGMLeA"/>
