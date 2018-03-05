@@ -1,45 +1,46 @@
 package main.java.softdesign;
 
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.text.DecimalFormat;
-
-import javax.imageio.ImageIO;
 import javax.swing.JInternalFrame;
 import javax.swing.JPanel;
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
-
-import com.jogamp.nativewindow.util.Dimension;
-import com.sun.prism.Graphics;
-import com.sun.prism.paint.Color;
-
-import javafx.scene.Camera;
-import simbad.demo.ImagerDemo;
 import simbad.sim.Agent;
 import simbad.sim.CameraSensor;
 import simbad.sim.RangeSensorBelt;
 import simbad.sim.RobotFactory;
 import simbad.sim.SensorMatrix;
 
+
 public class Robot extends Agent {
 
 	private String currentMode;
 	private RangeSensorBelt sonars, bumpers;
 	private CameraSensor camera;
-    private BufferedImage cameraImage;
+    private double elapsed;
+    private SensorMatrix luminanceMatrix;
+    private JPanel panel;
+    private JInternalFrame window;
     
     public Robot(Vector3d position, String name) {
         super(position, name);        
-       bumpers = RobotFactory.addBumperBeltSensor(this, 12);
-       sonars = RobotFactory.addSonarBeltSensor(this,12); 
-       camera = RobotFactory.addCameraSensor(this);
-       cameraImage = camera.createCompatibleImage();
+        bumpers = RobotFactory.addBumperBeltSensor(this, 12);
+        sonars = RobotFactory.addSonarBeltSensor(this,12); 
+        camera = RobotFactory.addCameraSensor(this);
+        luminanceMatrix = this.camera.createCompatibleSensorMatrix();
+        panel = new ImagerPanel();
+        Dimension localDimension = new Dimension(this.luminanceMatrix.getWidth(), this.luminanceMatrix.getHeight());
+        this.panel.setPreferredSize(localDimension);
+        this.panel.setMinimumSize(localDimension);
+        setUIPanel(this.panel);
     }
 
     /** This method is called by the simulator engine on reset. */
     public void initBehavior() {
+    	this.elapsed = getLifeTime();
         System.out.println("I exist and my name is " + this.name);
     }
     
@@ -102,30 +103,46 @@ public class Robot extends Agent {
     }
     
     public boolean timeCounter() {
-    	// do an activity in every 10th virtual second
-    	return this.getCounter() % 10 == 0;
+    	// do an activity in every 20th virtual second
+    	return this.getCounter() % 20 == 0;
     }
 
     /** This method is call cyclically (20 times per second) by the simulator engine. */
     public void performBehavior() {
-    	
-    	
-    	// move random in every 10th virtual second
+    	// move random and stream in every 20th virtual second
     	 if(timeCounter()) {
-    		 moveRandom();
-    		 camera.copyVisionImage(cameraImage);
-    		 try {
-    			    // retrieve image
-    			    File outputfile = new File("image.png");
-    			    ImageIO.write(cameraImage, "png", outputfile);
-    			} catch (IOException e) {
-    			}
+    		 this.elapsed = getLifeTime();
+    	     this.camera.copyVisionImage(this.luminanceMatrix);
+    	     this.panel.repaint();
     		 Vector3d currentCoordinate = getCurrentCoordinate();
     		 roundCoordinates(currentCoordinate);
-    		 System.out.println(currentCoordinate.toString());
-    		 
+    		 System.out.println("Streaming from " + currentCoordinate.toString());
+    		 moveRandom();
     	 } else {
     		 moveDeterministic();
     	 }
+    }
+    
+    class ImagerPanel extends JPanel {
+    	
+    	ImagerPanel() {}
+
+    	protected void paintComponent(Graphics paramGraphics) {
+    		int i = Robot.this.luminanceMatrix.getWidth();
+    		int j = Robot.this.luminanceMatrix.getHeight();
+    		super.paintComponent(paramGraphics);
+    		paramGraphics.setColor(Color.WHITE);
+    		paramGraphics.fillRect(0, 0, i, j);
+    		paramGraphics.setColor(Color.BLACK);
+    		for (int k = 0; k < j; k += 4) {
+    			for (int m = 0; m < i; m += 4)
+    			{
+    				float f = Robot.this.luminanceMatrix.get(m, k);
+    				if (f < 0.5D) {
+    					paramGraphics.fillRect(m, k, 4, 4);
+    				}
+    			}
+    		}
+    	}
     }
 }
