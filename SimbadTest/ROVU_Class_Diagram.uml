@@ -148,7 +148,7 @@
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZqprkSE4EeiQq83C24074A" key="nature" value="UML_Nature"/>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_Zqq5sCE4EeiQq83C24074A" name="centralstation" type="_CHjA4CEoEeiQq83C24074A" association="_ZqpEgCE4EeiQq83C24074A">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eA4E8CE4EeiQq83C24074A"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eA4E8CE4EeiQq83C24074A" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eA7vUCE4EeiQq83C24074A" value="1"/>
     </ownedEnd>
   </packagedElement>
