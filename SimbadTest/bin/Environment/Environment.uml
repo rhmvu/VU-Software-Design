@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_12VrYBcKEei7ipzadJJ7oA" name="Environment">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_2GUBEBcKEei7ipzadJJ7oA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_-qVQkBcKEei7ipzadJJ7oA" name="ROVU system">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Ufov8BcLEei7ipzadJJ7oA" name="Start Rovu mission"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_pvFwQBcLEei7ipzadJJ7oA" name="Give robot direction"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_U5PGQBcMEei7ipzadJJ7oA" name="Map grid point">
+      <extend xmi:type="uml:Extend" xmi:id="_5S_GgBcMEei7ipzadJJ7oA" extendedCase="_rPxqcBcMEei7ipzadJJ7oA" extensionLocation="_5TCJ0BcMEei7ipzadJJ7oA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_rPxqcBcMEei7ipzadJJ7oA" name="Receive photo grid point">
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_5TCJ0BcMEei7ipzadJJ7oA" name="ExtensionPoint1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_rtg54BcNEei7ipzadJJ7oA" name="Stop mission"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_IAg80BcLEei7ipzadJJ7oA" name="Operator"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_P62WIBcLEei7ipzadJJ7oA" name="Central station"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_X_LY8BcLEei7ipzadJJ7oA" memberEnd="_X_PDUBcLEei7ipzadJJ7oA _X_PqYBcLEei7ipzadJJ7oA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_X_N1MBcLEei7ipzadJJ7oA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_X_N1MRcLEei7ipzadJJ7oA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_X_PDUBcLEei7ipzadJJ7oA" name="start rovu mission" type="_Ufov8BcLEei7ipzadJJ7oA" association="_X_LY8BcLEei7ipzadJJ7oA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_X_PqYBcLEei7ipzadJJ7oA" name="operator" type="_IAg80BcLEei7ipzadJJ7oA" association="_X_LY8BcLEei7ipzadJJ7oA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_8ahfMBcMEei7ipzadJJ7oA" memberEnd="_8aiGQRcMEei7ipzadJJ7oA _8aiGQhcMEei7ipzadJJ7oA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8ahfMRcMEei7ipzadJJ7oA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8aiGQBcMEei7ipzadJJ7oA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_8aiGQRcMEei7ipzadJJ7oA" name="receive photo grid point" type="_rPxqcBcMEei7ipzadJJ7oA" association="_8ahfMBcMEei7ipzadJJ7oA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_8aiGQhcMEei7ipzadJJ7oA" name="central station" type="_P62WIBcLEei7ipzadJJ7oA" association="_8ahfMBcMEei7ipzadJJ7oA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_xFjVkBcNEei7ipzadJJ7oA" memberEnd="_xFj8ohcNEei7ipzadJJ7oA _xFj8oxcNEei7ipzadJJ7oA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xFj8oBcNEei7ipzadJJ7oA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xFj8oRcNEei7ipzadJJ7oA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_xFj8ohcNEei7ipzadJJ7oA" name="usecase1" type="_rtg54BcNEei7ipzadJJ7oA" association="_xFjVkBcNEei7ipzadJJ7oA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_xFj8oxcNEei7ipzadJJ7oA" name="central station" type="_P62WIBcLEei7ipzadJJ7oA" association="_xFjVkBcNEei7ipzadJJ7oA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_gqLtUBcjEeiUNKIKmaHfbA" memberEnd="_gqMUYRcjEeiUNKIKmaHfbA _gqMUYhcjEeiUNKIKmaHfbA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gqLtURcjEeiUNKIKmaHfbA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gqMUYBcjEeiUNKIKmaHfbA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_gqMUYRcjEeiUNKIKmaHfbA" name="central station" type="_P62WIBcLEei7ipzadJJ7oA" association="_gqLtUBcjEeiUNKIKmaHfbA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_gqMUYhcjEeiUNKIKmaHfbA" name="give robot direction" type="_pvFwQBcLEei7ipzadJJ7oA" association="_gqLtUBcjEeiUNKIKmaHfbA"/>
+  </packagedElement>
+</uml:Model>
