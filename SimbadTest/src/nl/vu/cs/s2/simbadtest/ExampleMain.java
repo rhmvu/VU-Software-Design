@@ -13,8 +13,7 @@ import javax.vecmath.Vector3d;
 public class ExampleMain {
 
     public static void main(String[] args) {
-        // request antialising so that diagonal lines are not "stairy"
-        System.setProperty("j3d.implicitAntialiasing", "true");
+        
         
         // creation of the environment containing all obstacles and robots
         EnvironmentDescription environment = new ExampleEnvironment();
