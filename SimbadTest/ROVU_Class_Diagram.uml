@@ -13,6 +13,20 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Zg02oCE3EeiQq83C24074A" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Zg02oSE3EeiQq83C24074A" value="1"/>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_CGdN8CHnEeiQq83C24074A" name="sonars" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_I-nYkCHnEeiQq83C24074A" name="camera" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_nJph4CHpEeiQq83C24074A" name="initBehavior"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_1KTZMCHpEeiQq83C24074A" name="Robot">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-e8NUCHpEeiQq83C24074A" name="position">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EJavaObject"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_CMAU8CHqEeiQq83C24074A" name="getCurrentCoordinate">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_GnCV0CHqEeiQq83C24074A" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EJavaObject"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_VAGtICHqEeiQq83C24074A" name="performBehavior"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_OXou8CEnEeiQq83C24074A" name="Environment">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_xcEXsiFLEeiQq83C24074A" name="robot" type="_NVbrECEnEeiQq83C24074A" aggregation="composite" association="_xcDJkCFLEeiQq83C24074A">
@@ -26,16 +40,16 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QazDEiEzEeiQq83C24074A" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QazDEyEzEeiQq83C24074A" value="1"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_ZqprkiE4EeiQq83C24074A" name="task" type="_OamKECEsEeiQq83C24074A" association="_ZqpEgCE4EeiQq83C24074A">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZqqSoCE4EeiQq83C24074A"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZqqSoSE4EeiQq83C24074A" value="*"/>
-    </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_5XNXYSFNEeiQq83C24074A" name="robot" type="_NVbrECEnEeiQq83C24074A" association="_5XLiMCFNEeiQq83C24074A">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5XN-cCFNEeiQq83C24074A"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5XOlgCFNEeiQq83C24074A" value="1"/>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ZqprkiE4EeiQq83C24074A" name="task" type="_OamKECEsEeiQq83C24074A" association="_ZqpEgCE4EeiQq83C24074A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZqqSoCE4EeiQq83C24074A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZqqSoSE4EeiQq83C24074A" value="*"/>
+    </ownedAttribute>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_DlciQCEoEeiQq83C24074A" name="Configuration">
+  <packagedElement xmi:type="uml:Class" xmi:id="_DlciQCEoEeiQq83C24074A" name="Main">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_vZCc4SEzEeiQq83C24074A" name="centralstation" type="_CHjA4CEoEeiQq83C24074A" aggregation="composite" association="_vZBOwCEzEeiQq83C24074A">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vZCc4iEzEeiQq83C24074A" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vZDD8CEzEeiQq83C24074A" value="1"/>
@@ -59,6 +73,7 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xgpq0CFNEeiQq83C24074A" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xgpq0SFNEeiQq83C24074A" value="*"/>
     </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_TDJmUCHsEeiQq83C24074A" name="update"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_OamKECEsEeiQq83C24074A" name="Task">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_F_vAIiE4EeiQq83C24074A" name="request" type="_S6NwACEsEeiQq83C24074A" association="_F_tyACE4EeiQq83C24074A">
@@ -147,7 +162,7 @@
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZqprkCE4EeiQq83C24074A" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZqprkSE4EeiQq83C24074A" key="nature" value="UML_Nature"/>
     </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_Zqq5sCE4EeiQq83C24074A" name="centralstation" type="_CHjA4CEoEeiQq83C24074A" association="_ZqpEgCE4EeiQq83C24074A">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Zqq5sCE4EeiQq83C24074A" type="_CHjA4CEoEeiQq83C24074A" association="_ZqpEgCE4EeiQq83C24074A">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eA4E8CE4EeiQq83C24074A" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eA7vUCE4EeiQq83C24074A" value="1"/>
     </ownedEnd>
