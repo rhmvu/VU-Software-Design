@@ -21,14 +21,7 @@ public abstract class Observer extends Agent{
 		// TODO Auto-generated constructor stub
 	}
 
-	/**
-	 * 
-	 */
-	
 
-	/**
-	 * 
-	 */
 	public abstract void update();
 
 };
