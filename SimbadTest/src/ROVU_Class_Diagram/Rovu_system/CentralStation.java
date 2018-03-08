@@ -19,12 +19,21 @@ import ROVU_Class_Diagram.Rovu_system.Task;
  */
 public class CentralStation extends Subject {
 
+	static private CentralStation instance = new CentralStation();
 	public Map map;
 	public Task[] task;
 	boolean running;
 	
-	public CentralStation(int mapSize) {
+	private CentralStation() {
 		//super();
+		//map = new Map(mapSize);
+	}
+	
+	public static CentralStation getInstance() {
+		return instance;
+	}
+	
+	public void init(int mapSize) {
 		map = new Map(mapSize);
 	}
 	
