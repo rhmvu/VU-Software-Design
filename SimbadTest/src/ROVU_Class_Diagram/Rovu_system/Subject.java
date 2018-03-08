@@ -4,6 +4,9 @@
 
 package ROVU_Class_Diagram.Rovu_system;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.vecmath.Vector3d;
 
 import simbad.sim.Agent;
@@ -12,10 +15,18 @@ import simbad.sim.Agent;
 /**
  * 
  */
-public abstract class Subject extends Agent {
+public abstract class Subject {
 
-	public Subject(Vector3d arg0, String arg1) {
-		super(arg0, arg1);
-		// TODO Auto-generated constructor stub
+	protected List<Observer> observers = new ArrayList<Observer>();
+	public Task newTask;
+	
+	protected void setTask(Task newTask) {
+		this.newTask = newTask;
+	}
+	public void attach(Observer observer) {
+		this.observers.add(observer);
+	}
+	public void detach(Observer observer) {
+		this.observers.remove(observer);
 	}
 };

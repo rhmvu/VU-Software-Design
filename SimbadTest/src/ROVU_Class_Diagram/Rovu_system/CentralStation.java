@@ -4,6 +4,8 @@
 
 package ROVU_Class_Diagram.Rovu_system;
 
+import java.util.List;
+
 import javax.vecmath.Vector3d;
 
 import ROVU_Class_Diagram.Rovu_system.Map;
@@ -15,23 +17,37 @@ import ROVU_Class_Diagram.Rovu_system.Task;
 /**
  * 
  */
-public class CentralStation extends Observer {
+public class CentralStation extends Subject {
 
 	public Map map;
 	public Task[] task;
 	boolean running;
 	
 	public CentralStation(int mapSize) {
+		//super();
 		map = new Map(mapSize);
 	}
 	
 	public void start() {
 		System.out.println("Central station started");
 		running = true;
+		pushTask(new Task(Request.sendCoordinatesWithInterval),observers); //Let the bots send their coordinates by their own counter interval for now
 
 	}
-
-	public void report(Robot robot) {
+	
+	private void pushTask(Task toPush, List<Observer> ObserversToReceive) {
+		setTask(toPush);
+		for(Observer observer: ObserversToReceive) {
+			observer.update();
+		}
+	}
+	
+	/*public void report() {
+		pushTask(new Task(Request.sendCoordinates),this.observers);
+	}*/
+	
+	
+	public void reportCoordinate(Robot robot) {
 		map.setGridPointStatus(GridPointStatus.COVERED, (int)robot.getCurrentCoordinate()[0] + 9, (int)robot.getCurrentCoordinate()[1] + 9);		
 	}
 };

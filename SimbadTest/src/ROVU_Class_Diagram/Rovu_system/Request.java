@@ -9,4 +9,5 @@ package ROVU_Class_Diagram.Rovu_system;
  * 
  */
 public enum Request {
+	turnLeft, turnRight, sendCoordinates, sendCoordinatesWithInterval;
 };
