@@ -38,7 +38,9 @@ public class Environment extends EnvironmentDescription {
 	public Environment(int arches, int boxes, int robots) {
 		robot = new Robot[robots];
 		fac = new ObstacleFactory();
-		this.station = new CentralStation(MAPSIZE);
+		this.station = CentralStation.getInstance();
+		this.station.init(MAPSIZE);
+		//this.station = new CentralStation(MAPSIZE);
 		
 		this.light1IsOn = true;
 		this.light2IsOn = true;
