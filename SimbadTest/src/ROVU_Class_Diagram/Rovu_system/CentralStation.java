@@ -47,7 +47,7 @@ public class CentralStation extends Subject {
 	}*/
 	
 	
-	public void reportCoordinate(Robot robot) {
-		map.setGridPointStatus(GridPointStatus.COVERED, (int)robot.getCurrentCoordinate()[0] + 9, (int)robot.getCurrentCoordinate()[1] + 9);		
+	public void reportCoordinate(int coordinate1, int coordinate2) {
+		map.setGridPointStatus(GridPointStatus.COVERED, coordinate1,coordinate2);		
 	}
 };
