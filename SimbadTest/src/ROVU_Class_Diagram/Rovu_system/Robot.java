@@ -157,6 +157,6 @@ public class Robot extends Observer {
         		sendCoordinates();
         	}
     	}
-    	System.out.printf("Percentage: %.2f  \n",station.map.getCoveredPercentage());
+    	System.out.printf("Percentage: %.2f%%\n",station.map.getCoveredPercentage());
 	}
 };
