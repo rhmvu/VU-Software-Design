@@ -125,6 +125,7 @@ public class Configuration implements ActionListener{
         Simbad simframe = new Simbad(environment, false);
         simframe.update(simframe.getGraphics());
         environment.rotateForStartingPosition();
+        environment.station.start();
 
 		
 	}

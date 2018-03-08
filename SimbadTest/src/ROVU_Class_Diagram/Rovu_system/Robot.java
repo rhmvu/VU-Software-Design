@@ -46,23 +46,34 @@ public class Robot extends Observer {
 	
 	public void setStation(CentralStation station) {
 		this.station = station;
+		this.subject = station;
 		station.attach(this);
+		
 	}
 	
 	public void update() {
-		executeTask(this.subject.newTask);
+		Task toExecute = subject.getTask();
+		executeTask(toExecute);
 	}
 	
 	private void executeTask(Task executable) {
 		switch(executable.request) {
-		case turnLeft: turnLeft();
-		case turnRight: turnRight();
-		case sendCoordinates: sendCoordinates();
-		case sendCoordinatesWithInterval: //setCoordinateInterval();
-			this.sendCoordinatesWithInterval  = true;
-		default: System.out.printf("Rover %s got an unkown task\n",this.name);
+			case turnLeft: turnLeft();
+			break;
+			
+			case turnRight: turnRight();
+			break;
+			
+			case sendCoordinates: sendCoordinates();
+			break;
+			
+			case sendCoordinatesWithInterval:
+				this.sendCoordinatesWithInterval = true;
+				break;
+			
+			default: System.out.printf("Rover %s got an unkown task\n",this.name);
+				break;
 		}
-		
 	}
 	
 	private void sendCoordinates() {
@@ -146,6 +157,6 @@ public class Robot extends Observer {
         		sendCoordinates();
         	}
     	}
-    	System.out.println("Percentage: " + station.map.getCoveredPercentage() + "%");
+    	System.out.printf("Percentage: %.2f  \n",station.map.getCoveredPercentage());
 	}
 };
