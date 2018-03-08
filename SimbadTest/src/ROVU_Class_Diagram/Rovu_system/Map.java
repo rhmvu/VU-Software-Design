@@ -58,6 +58,6 @@ public class Map {
 				}
 			}
 		}
-		System.out.println(coveredPercentage);
+		coveredPercentage = (objectGridPoints + coveredGridPoints) / numberOfGridPoints * 100;
 	}
 };

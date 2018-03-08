@@ -30,4 +30,5 @@ public abstract class Observer extends Agent{
 	 * 
 	 */
 	public abstract void update();
+
 };

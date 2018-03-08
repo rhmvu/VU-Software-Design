@@ -18,10 +18,13 @@ import simbad.sim.Agent;
 public abstract class Subject {
 
 	protected List<Observer> observers = new ArrayList<Observer>();
-	public Task newTask;
+	private Task newTask;
 	
 	protected void setTask(Task newTask) {
 		this.newTask = newTask;
+	}
+	public Task getTask() {
+		return newTask;
 	}
 	public void attach(Observer observer) {
 		this.observers.add(observer);
