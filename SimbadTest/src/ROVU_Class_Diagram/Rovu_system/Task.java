@@ -15,4 +15,8 @@ public class Task {
 	 * 
 	 */
 	public Request request;
+	
+	public Task(Request request){
+		this.request = request;
+	}
 };

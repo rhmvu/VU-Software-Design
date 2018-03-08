@@ -21,7 +21,7 @@ import simbad.sim.SensorMatrix;
 import ROVU_Class_Diagram.Rovu_system.Subject;
 
 
-public class Robot extends Subject {
+public class Robot extends Observer {
 	/**
 	 * 
 	 */
@@ -34,18 +34,40 @@ public class Robot extends Subject {
 	
 	private final Enum[] direction = {RobotDirection.NORTH, RobotDirection.WEST, RobotDirection.SOUTH, RobotDirection.EAST}; 
 	private int currentDirection;
+	private boolean sendCoordinatesWithInterval;
 
 	public Robot(Vector3d position, String name) {
-		super(position, name); 
+		super(position, name);
 		sonars = RobotFactory.addSonarBeltSensor(this,8); 
 	    camera = RobotFactory.addCameraSensor(this);
 	    lastTurnLeft = false;
+	    sendCoordinatesWithInterval = false;
 	}
 	
 	public void setStation(CentralStation station) {
 		this.station = station;
+		station.attach(this);
 	}
 	
+	public void update() {
+		executeTask(this.subject.newTask);
+	}
+	
+	private void executeTask(Task executable) {
+		switch(executable.request) {
+		case turnLeft: turnLeft();
+		case turnRight: turnRight();
+		case sendCoordinates: sendCoordinates();
+		case sendCoordinatesWithInterval: //setCoordinateInterval();
+			this.sendCoordinatesWithInterval  = true;
+		default: System.out.printf("Rover %s got an unkown task\n",this.name);
+		}
+		
+	}
+	
+	private void sendCoordinates() {
+		this.station.reportCoordinate(this);
+	}
 	
 	public void initBehavior() {
         System.out.println("I exist and my name is " + this.name);
@@ -118,10 +140,12 @@ public class Robot extends Subject {
     			this.setTranslationalVelocity(0.5);
     		}
     	}
-    	
-    	if(this.getCounter() % 20 == 0) {
-    		station.report(this);
-    		System.out.println("Percentage: " + station.map.getCoveredPercentage() + "%");
+    	if(sendCoordinatesWithInterval == true) {
+    		if(this.getCounter() % 20 == 0) {
+        		//station.report(this);
+        		sendCoordinates();
+        	}
     	}
+    	System.out.println("Percentage: " + station.map.getCoveredPercentage() + "%");
 	}
 };
