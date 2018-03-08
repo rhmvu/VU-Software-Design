@@ -77,7 +77,7 @@ public class Robot extends Observer {
 	}
 	
 	private void sendCoordinates() {
-		this.station.reportCoordinate(this);
+		this.station.reportCoordinate((int) getCurrentCoordinate()[0] + 9, (int) getCurrentCoordinate()[1] + 9);
 	}
 	
 	public void initBehavior() {
