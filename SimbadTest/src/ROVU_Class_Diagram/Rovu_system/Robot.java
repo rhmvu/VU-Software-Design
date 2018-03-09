@@ -48,9 +48,7 @@ public class Robot extends Observer {
 	
 	public void setStation(CentralStation station) {
 		this.station = station;
-		this.subject = station;
 		station.attach(this);
-		
 	}
 	
 	public void update(Task toExecute) {

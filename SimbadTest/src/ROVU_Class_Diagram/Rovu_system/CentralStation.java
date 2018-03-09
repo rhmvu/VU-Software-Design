@@ -25,8 +25,7 @@ public class CentralStation extends Subject {
 	boolean running;
 	
 	private CentralStation() {
-		//super();
-		//map = new Map(mapSize);
+
 	}
 	
 	public static CentralStation getInstance() {
@@ -39,9 +38,7 @@ public class CentralStation extends Subject {
 	
 	public void start() {
 		System.out.println("Central station started");
-		running = true;
 		pushTask(new Task(Request.sendCoordinatesWithInterval),observers); //Let the bots send their coordinates by their own counter interval for now
-
 	}
 	
 	private void pushTask(Task toPush, List<Observer> ObserversToReceive) {
@@ -56,25 +53,25 @@ public class CentralStation extends Subject {
 	
 	
 	public void report(int coordinate1, int coordinate2, Observer observer, RobotDirection direction, double distanceObst, boolean wallFollowing) {
-		if(distanceObst > 0.71 && distanceObst < 1.5) {
-			switch(direction) {
-			case NORTH:
-				map.setGridPointStatus(GridPointStatus.OBSTACLE, coordinate1 ,coordinate2 + 1);	
-				break;
-			case WEST:
-				map.setGridPointStatus(GridPointStatus.OBSTACLE, coordinate1 - 1,coordinate2);	
-				break;
-			case SOUTH:
-				map.setGridPointStatus(GridPointStatus.OBSTACLE, coordinate1 ,coordinate2 - 1);	
-				break;
-			case EAST:
-				map.setGridPointStatus(GridPointStatus.OBSTACLE, coordinate1 + 1 ,coordinate2);	
-				break;
-			default:
-				break;
-				
-			}
-		}
+//		if(distanceObst > 0.71 && distanceObst < 1.5) {
+//			switch(direction) {
+//			case NORTH:
+//				map.setGridPointStatus(GridPointStatus.OBSTACLE, coordinate1 ,coordinate2 + 1);	
+//				break;
+//			case WEST:
+//				map.setGridPointStatus(GridPointStatus.OBSTACLE, coordinate1 - 1,coordinate2);	
+//				break;
+//			case SOUTH:
+//				map.setGridPointStatus(GridPointStatus.OBSTACLE, coordinate1 ,coordinate2 - 1);	
+//				break;
+//			case EAST:
+//				map.setGridPointStatus(GridPointStatus.OBSTACLE, coordinate1 + 1 ,coordinate2);	
+//				break;
+//			default:
+//				break;
+//				
+//			}
+//		}
 		map.setGridPointStatus(GridPointStatus.COVERED, coordinate1,coordinate2);	
 		
 		switch(direction) {
@@ -82,36 +79,39 @@ public class CentralStation extends Subject {
 			if(coordinate1 != 0 && map.getGridPointStatus(coordinate1 - 1, coordinate2) == GridPointStatus.COVERED) {
 				observer.update(new Task(Request.turnLeft));
 			}
-			else if(!wallFollowing && coordinate1 != 0 && coordinate2 != 0 && map.getGridPointStatus(coordinate1, coordinate2 + 1) != GridPointStatus.COVERED) {
-				observer.update(new Task(Request.turnRight));
-			}
+//			else if(!wallFollowing && coordinate1 != 0 && coordinate2 != 0 && map.getGridPointStatus(coordinate1, coordinate2 + 1) != GridPointStatus.COVERED) {
+//				observer.update(new Task(Request.turnRight));
+//			}
 			break;
 		case WEST:
 			if(coordinate2 != 19 && map.getGridPointStatus(coordinate1, coordinate2 + 1) == GridPointStatus.COVERED) {
 				observer.update(new Task(Request.turnLeft));
-			}else if(!wallFollowing && coordinate1 != 0 && coordinate2 != 0 && map.getGridPointStatus(coordinate1 - 1, coordinate2) != GridPointStatus.COVERED) {
-				observer.update(new Task(Request.turnRight));
 			}
+//			else if(!wallFollowing && coordinate1 != 0 && coordinate2 != 0 && map.getGridPointStatus(coordinate1 - 1, coordinate2) != GridPointStatus.COVERED) {
+//				observer.update(new Task(Request.turnRight));
+//			}
 			break;
 		case SOUTH:
 			if(coordinate1 != 19 && map.getGridPointStatus(coordinate1 + 1, coordinate2) == GridPointStatus.COVERED) {
 				observer.update(new Task(Request.turnLeft));
-			}else if(!wallFollowing && coordinate1 != 0 && coordinate2 != 0 && map.getGridPointStatus(coordinate1 + 1, coordinate2) != GridPointStatus.COVERED) {
-				observer.update(new Task(Request.turnRight));
 			}
+//			else if(!wallFollowing && coordinate1 != 0 && coordinate2 != 0 && map.getGridPointStatus(coordinate1 + 1, coordinate2) != GridPointStatus.COVERED) {
+//				observer.update(new Task(Request.turnRight));
+//			}
 			break;
 		case EAST:
 			if(coordinate2 != 0 && map.getGridPointStatus(coordinate1, coordinate2 - 1) == GridPointStatus.COVERED) {
 				observer.update(new Task(Request.turnLeft));
-			}else if(!wallFollowing && coordinate1 != 0 && coordinate2 != 0 && map.getGridPointStatus(coordinate1, coordinate2 - 1) != GridPointStatus.COVERED) {
-				observer.update(new Task(Request.turnRight));
 			}
+//			else if(!wallFollowing && coordinate1 != 0 && coordinate2 != 0 && map.getGridPointStatus(coordinate1, coordinate2 - 1) != GridPointStatus.COVERED) {
+//				observer.update(new Task(Request.turnRight));
+//			}
 			break;
 		default:
 			break;
 			
 		}
-		if(map.getCoveredPercentage() > 70.0) {
+		if(map.getCoveredPercentage() > 99.0) {
 			pushTask(new Task(Request.goHome), observers);
 		}
 	}

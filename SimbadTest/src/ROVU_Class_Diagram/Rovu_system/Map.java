@@ -27,14 +27,6 @@ public class Map {
 				
 			}
 		}
-		
-		//To check whether coordinates are mapped correctly		
-//		for(int x = 0; x < mapSize; x++) {
-//			for(int z = 0; z < mapSize; z++) {
-//				System.out.print(grid[x][z].getCoordinates());
-//			}
-//			System.out.println("");
-//		}
 	}
 
 	public void setGridPointStatus(GridPointStatus status, int x, int z) {
