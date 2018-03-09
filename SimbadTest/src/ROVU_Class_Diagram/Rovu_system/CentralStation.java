@@ -19,17 +19,16 @@ import ROVU_Class_Diagram.Rovu_system.Task;
  */
 public class CentralStation extends Subject {
 
-	static private CentralStation instance = new CentralStation();
+	static private final CentralStation INSTANCE = new CentralStation();
 	public Map map;
-	public Task[] task;
-	boolean running;
+	public Task task;
 	
 	private CentralStation() {
-
+		task = new Task(Request.sendCoordinatesWithIntervalAndWallFollowing);
 	}
 	
 	public static CentralStation getInstance() {
-		return instance;
+		return INSTANCE;
 	}
 	
 	public void init(int mapSize) {
@@ -38,7 +37,7 @@ public class CentralStation extends Subject {
 	
 	public void start() {
 		System.out.println("Central station started");
-		pushTask(new Task(Request.sendCoordinatesWithInterval),observers); //Let the bots send their coordinates by their own counter interval for now
+		pushTask(task, observers); //Let the bots send their coordinates by their own counter interval for now
 	}
 	
 	private void pushTask(Task toPush, List<Observer> ObserversToReceive) {
