@@ -86,6 +86,7 @@ public class Environment extends EnvironmentDescription {
 			this.add(robot[i]);
 			robot[i].setStation(station);
 			robot[i].rotateY(STARTING_ROTATION[i]);
+			System.out.println("Robot coordinates: " + STARTING_COORDINATES[i] + " Facing: " + robot[i].getDirection());
 		}  
 	}
 	

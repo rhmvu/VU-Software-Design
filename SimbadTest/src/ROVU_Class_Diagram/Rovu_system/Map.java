@@ -27,6 +27,14 @@ public class Map {
 				
 			}
 		}
+		
+		//To check whether coordinates are mapped correctly		
+//		for(int x = 0; x < mapSize; x++) {
+//			for(int z = 0; z < mapSize; z++) {
+//				System.out.print(grid[x][z].getCoordinates());
+//			}
+//			System.out.println("");
+//		}
 	}
 
 	public void setGridPointStatus(GridPointStatus status, int x, int z) {
@@ -38,9 +46,10 @@ public class Map {
 		return coveredPercentage;
 	}
 
-	/**
-	 * 
-	 */
+	public GridPointStatus getGridPointStatus(int x,int z) {
+		return grid[x][z].getStatus();
+	}
+	
 	private void calculateCoveredPercentage() {
 		double numberOfGridPoints = grid.length * grid.length;
 		double coveredGridPoints = 0;
@@ -51,8 +60,10 @@ public class Map {
 				switch (grid[x][z].gridpointstatus) {
 					case COVERED:
 						coveredGridPoints++;
+						break;
 					case OBSTACLE:
-						objectGridPoints++;		
+						objectGridPoints++;
+						break;
 					default: 
 						
 				}
