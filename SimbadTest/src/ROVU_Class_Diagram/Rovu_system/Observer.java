@@ -14,7 +14,6 @@ import simbad.sim.Agent;
  * 
  */
 public abstract class Observer extends Agent{
-	public Subject subject;
 	
 	public Observer(Vector3d arg0, String arg1) {
 		super(arg0, arg1);

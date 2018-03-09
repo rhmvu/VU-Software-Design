@@ -9,5 +9,5 @@ package ROVU_Class_Diagram.Rovu_system;
  * 
  */
 public enum GridPointStatus {
-	UNKNOWN, ACCESSIBLE, OBSTACLE, COVERED, INACCESSIBLE;
+	UNKNOWN, OBSTACLE, COVERED;
 };
