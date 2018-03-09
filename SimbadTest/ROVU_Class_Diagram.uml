@@ -264,20 +264,14 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_X9F5YCOwEeijKP9zZ3gtUQ" name="rotateForStartingPosition" visibility="public" method="_X9HukCOwEeijKP9zZ3gtUQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_X2SGwCOwEeijKP9zZ3gtUQ" name="CentralStation" visibility="public">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_X2TU4COwEeijKP9zZ3gtUQ" name="map" visibility="public" type="_X2St0COwEeijKP9zZ3gtUQ" isUnique="false"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_X2UjACOwEeijKP9zZ3gtUQ" name="task" visibility="public" type="_X2T78COwEeijKP9zZ3gtUQ" isUnique="false">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_X2UjASOwEeijKP9zZ3gtUQ"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_X2VKECOwEeijKP9zZ3gtUQ" value="*"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_X2VKESOwEeijKP9zZ3gtUQ" name="running" visibility="private" isUnique="false">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
-        </ownedAttribute>
+        <generalization xmi:type="uml:Generalization" xmi:id="_7d-KYCPQEeiIiLS7dBkF5Q" general="_YJjoECOwEeijKP9zZ3gtUQ"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_FfIB4yOzEeijKP9zZ3gtUQ" name="robot" type="_X8rCoCOwEeijKP9zZ3gtUQ" association="_FfIB4COzEeijKP9zZ3gtUQ">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ETB40CPMEeiQCJiXMLIxYg" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ETSXgCPMEeiQCJiXMLIxYg" value="4"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_WcEEIiOzEeijKP9zZ3gtUQ" name="map" type="_X2St0COwEeijKP9zZ3gtUQ" association="_WcDdECOzEeijKP9zZ3gtUQ"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_ASCcgiO0EeijKP9zZ3gtUQ" name="task" type="_X2T78COwEeijKP9zZ3gtUQ" association="_ASB1cCO0EeijKP9zZ3gtUQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="__0IAYCPSEeiIiLS7dBkF5Q" name="INSTANCE" isStatic="true" type="_X2SGwCOwEeijKP9zZ3gtUQ" isReadOnly="true"/>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X2gJMCOwEeijKP9zZ3gtUQ" name="CentralStation" specification="_X2YNYCOwEeijKP9zZ3gtUQ">
           <language>JAVA</language>
           <body>
@@ -558,10 +552,6 @@
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_X2St0COwEeijKP9zZ3gtUQ" name="Map" visibility="public">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_YI12YCOwEeijKP9zZ3gtUQ" name="grid" visibility="public" isLeaf="true" type="_X9Kx4COwEeijKP9zZ3gtUQ" isUnique="false">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YI12YSOwEeijKP9zZ3gtUQ"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YI4SoCOwEeijKP9zZ3gtUQ" value="*"/>
-        </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_YI45sCOwEeijKP9zZ3gtUQ" name="coveredPercentage" visibility="private" isUnique="false">
           <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
         </ownedAttribute>
@@ -686,18 +676,10 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_X905MCOwEeijKP9zZ3gtUQ" type="_YIfRECOwEeijKP9zZ3gtUQ" direction="return"/>
         </ownedOperation>
       </packagedElement>
-      <packagedElement xmi:type="uml:Enumeration" xmi:id="_YIfRECOwEeijKP9zZ3gtUQ" name="GridPointStatus" visibility="public">
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YIkwoCOwEeijKP9zZ3gtUQ" name="UNKNOWN"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YIkwoSOwEeijKP9zZ3gtUQ" name="ACCESSIBLE"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YIlXsCOwEeijKP9zZ3gtUQ" name="OBSTACLE"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YIml0COwEeijKP9zZ3gtUQ" name="COVERED"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YInM4COwEeijKP9zZ3gtUQ" name="INACCESSIBLE"/>
-      </packagedElement>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_YK99UCOwEeijKP9zZ3gtUQ" name="Request" visibility="public">
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YK-kYCOwEeijKP9zZ3gtUQ" name="turnLeft"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YK-kYSOwEeijKP9zZ3gtUQ" name="turnRight"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YK_LcCOwEeijKP9zZ3gtUQ" name="sendCoordinates"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YK_LcSOwEeijKP9zZ3gtUQ" name="sendCoordinatesWithInterval"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YK_LcSOwEeijKP9zZ3gtUQ" name="sendCoordinatesWithIntervalAndWallFollowing"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_X2T78COwEeijKP9zZ3gtUQ" name="Task" visibility="public">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_YYJdsCOwEeijKP9zZ3gtUQ" name="request" visibility="public" type="_YK99UCOwEeijKP9zZ3gtUQ" isUnique="false"/>
@@ -713,7 +695,6 @@
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_YJjoECOwEeijKP9zZ3gtUQ" name="Subject" visibility="public" isAbstract="true">
-        <generalization xmi:type="uml:Generalization" xmi:id="_OvWaoCO0EeijKP9zZ3gtUQ" general="_X2SGwCOwEeijKP9zZ3gtUQ"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_YX5mECOwEeijKP9zZ3gtUQ" name="observers" visibility="protected" type="_X2kaoCOwEeijKP9zZ3gtUQ" isUnique="false">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YX6NICOwEeijKP9zZ3gtUQ"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YX6NISOwEeijKP9zZ3gtUQ" value="*"/>
@@ -799,7 +780,10 @@
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WcEEICOzEeijKP9zZ3gtUQ" source="org.eclipse.papyrus">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WcEEISOzEeijKP9zZ3gtUQ" key="nature" value="UML_Nature"/>
       </eAnnotations>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_WcEEIyOzEeijKP9zZ3gtUQ" name="centralstation" type="_X2SGwCOwEeijKP9zZ3gtUQ" association="_WcDdECOzEeijKP9zZ3gtUQ"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_WcEEIyOzEeijKP9zZ3gtUQ" name="centralstation" type="_X2SGwCOwEeijKP9zZ3gtUQ" association="_WcDdECOzEeijKP9zZ3gtUQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XajKACPREeiIiLS7dBkF5Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XanbcCPREeiIiLS7dBkF5Q" value="1"/>
+      </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_g3KxECOzEeijKP9zZ3gtUQ" memberEnd="_g3LYIiOzEeijKP9zZ3gtUQ _g3LYIyOzEeijKP9zZ3gtUQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_g3LYICOzEeijKP9zZ3gtUQ" source="org.eclipse.papyrus">
@@ -843,6 +827,13 @@
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="_sLRGECO0EeijKP9zZ3gtUQ" name="robot" type="_X8rCoCOwEeijKP9zZ3gtUQ" association="_sLP38CO0EeijKP9zZ3gtUQ"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_YIfRECOwEeijKP9zZ3gtUQ" name="GridPointStatus" visibility="public">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YIkwoCOwEeijKP9zZ3gtUQ" name="UNKNOWN"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YIkwoSOwEeijKP9zZ3gtUQ" name="ACCESSIBLE"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YIlXsCOwEeijKP9zZ3gtUQ" name="OBSTACLE"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YIml0COwEeijKP9zZ3gtUQ" name="COVERED"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YInM4COwEeijKP9zZ3gtUQ" name="INACCESSIBLE"/>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_B_TzcCOwEeijKP9zZ3gtUQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CAthoCOwEeijKP9zZ3gtUQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
@@ -860,6 +851,12 @@
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_eVbcACPSEeiIiLS7dBkF5Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eVd4QCPSEeiIiLS7dBkF5Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
     </profileApplication>
   </uml:Model>
   <standard:Create xmi:id="_X2ds8COwEeijKP9zZ3gtUQ" base_BehavioralFeature="_X2YNYCOwEeijKP9zZ3gtUQ"/>

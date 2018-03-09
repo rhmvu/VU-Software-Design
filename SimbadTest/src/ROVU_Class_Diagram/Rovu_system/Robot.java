@@ -65,11 +65,9 @@ public class Robot extends Observer {
 			case turnRight: turnRight();
 				wallFolowing = false;
 			break;
-			
-			case sendCoordinates: sendCoordinates();
-			break;
-			
-			case sendCoordinatesWithInterval:
+						
+			case sendCoordinatesWithIntervalAndWallFollowing:
+				this.wallFolowing = true;
 				this.sendCoordinatesWithInterval = true;
 				break;
 			
@@ -88,7 +86,6 @@ public class Robot extends Observer {
 	
 	public void initBehavior() {
         System.out.println("I exist and my name is " + this.name);
-        wallFolowing = true;
         goingHome = false;
 	}
 
