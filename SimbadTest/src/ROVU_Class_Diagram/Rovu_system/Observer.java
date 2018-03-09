@@ -22,6 +22,6 @@ public abstract class Observer extends Agent{
 	}
 
 
-	public abstract void update();
+	public abstract void update(Task task);
 
 };
