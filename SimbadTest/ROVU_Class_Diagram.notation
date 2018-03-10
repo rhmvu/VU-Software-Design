@@ -99,6 +99,13 @@
             <element xmi:type="uml:Property" href="ROVU_Class_Diagram.uml#_i6R04CROEeirnb106mTxLg"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_xTgkQSROEeirnb106mTxLg"/>
           </children>
+          <children xmi:type="notation:Shape" xmi:id="_0KDlsCRxEei75a1G5gx9qQ" type="Property_ClassAttributeLabel">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0N1ScCRxEei75a1G5gx9qQ" source="PapyrusCSSForceValue">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0N1ScSRxEei75a1G5gx9qQ" key="mutable" value="true"/>
+            </eAnnotations>
+            <element xmi:type="uml:Property" href="ROVU_Class_Diagram.uml#_0I5vICRxEei75a1G5gx9qQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_0KDlsSRxEei75a1G5gx9qQ"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_u28bMyROEeirnb106mTxLg"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_u28bNCROEeirnb106mTxLg"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_u28bNSROEeirnb106mTxLg"/>
@@ -305,6 +312,13 @@
             </eAnnotations>
             <element xmi:type="uml:Operation" href="ROVU_Class_Diagram.uml#_i5LBoCROEeirnb106mTxLg"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_xVpSQSROEeirnb106mTxLg"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_neHUACRwEei75a1G5gx9qQ" type="Operation_ClassOperationLabel">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nhnT8CRwEei75a1G5gx9qQ" source="PapyrusCSSForceValue">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_nhnT8SRwEei75a1G5gx9qQ" key="mutable" value="true"/>
+            </eAnnotations>
+            <element xmi:type="uml:Operation" href="ROVU_Class_Diagram.uml#_nc06kCRwEei75a1G5gx9qQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_neHUASRwEei75a1G5gx9qQ"/>
           </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_uy6PxSROEeirnb106mTxLg"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_uy6PxiROEeirnb106mTxLg"/>
@@ -799,6 +813,13 @@
             </eAnnotations>
             <element xmi:type="uml:Operation" href="ROVU_Class_Diagram.uml#_jNH4YCROEeirnb106mTxLg"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_xRoU8SROEeirnb106mTxLg"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_Y07noCRxEei75a1G5gx9qQ" type="Operation_ClassOperationLabel">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Y4l_oCRxEei75a1G5gx9qQ" source="PapyrusCSSForceValue">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Y4mmsCRxEei75a1G5gx9qQ" key="mutable" value="true"/>
+            </eAnnotations>
+            <element xmi:type="uml:Operation" href="ROVU_Class_Diagram.uml#_Yz2CgCRxEei75a1G5gx9qQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Y07noSRxEei75a1G5gx9qQ"/>
           </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_u3HaWCROEeirnb106mTxLg"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_u3HaWSROEeirnb106mTxLg"/>
