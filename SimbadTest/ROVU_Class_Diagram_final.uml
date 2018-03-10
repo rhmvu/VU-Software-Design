@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
   <uml:Model xmi:id="_J8W2cCEnEeiQq83C24074A" name="ROVU_Class_Diagram">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_KP3BQCEnEeiQq83C24074A">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -528,24 +528,6 @@
       <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
     </profileApplication>
   </uml:Model>
-  <PapyrusJava:External xmi:id="_X5vqcCOwEeijKP9zZ3gtUQ" name="java.awt.event.ActionListener" base_Classifier="_X5rZASOwEeijKP9zZ3gtUQ"/>
-  <PapyrusJava:External xmi:id="_X51xECOwEeijKP9zZ3gtUQ" name="JFrame" base_Classifier="_X5xfoSOwEeijKP9zZ3gtUQ"/>
-  <PapyrusJava:External xmi:id="_X56CgCOwEeijKP9zZ3gtUQ" name="JPanel" base_Classifier="_X52YICOwEeijKP9zZ3gtUQ"/>
-  <PapyrusJava:External xmi:id="_X5-7ACOwEeijKP9zZ3gtUQ" name="JLabel" base_Classifier="_X57QoCOwEeijKP9zZ3gtUQ"/>
-  <PapyrusJava:External xmi:id="_X6FBoCOwEeijKP9zZ3gtUQ" name="JComboBox" base_Classifier="_X6BXQCOwEeijKP9zZ3gtUQ"/>
-  <PapyrusJava:External xmi:id="_X6MWYCOwEeijKP9zZ3gtUQ" name="JButton" base_Classifier="_X6IE8COwEeijKP9zZ3gtUQ"/>
-  <PapyrusJava:External xmi:id="_X6TrICOwEeijKP9zZ3gtUQ" name="java.awt.event.ActionEvent" base_Classifier="_X6QAwCOwEeijKP9zZ3gtUQ"/>
-  <PapyrusJava:External xmi:id="_X8HpACOwEeijKP9zZ3gtUQ" name="simbad.sim.EnvironmentDescription" base_Classifier="_X8CwgSOwEeijKP9zZ3gtUQ"/>
-  <PapyrusJava:External xmi:id="_X8NvoCOwEeijKP9zZ3gtUQ" name="javax.vecmath.Vector3d" base_Classifier="_X8KFQCOwEeijKP9zZ3gtUQ"/>
-  <PapyrusJava:External xmi:id="_X8Z84COwEeijKP9zZ3gtUQ" name="javax.vecmath.Vector3f" base_Classifier="_X8WSgCOwEeijKP9zZ3gtUQ"/>
-  <PapyrusJava:External xmi:id="_YIuhoCOwEeijKP9zZ3gtUQ" name="java.lang.String" base_Classifier="_YIreUCOwEeijKP9zZ3gtUQ"/>
-  <PapyrusJava:External xmi:id="_YJevkCOwEeijKP9zZ3gtUQ" name="simbad.sim.Agent" base_Classifier="_YJaeICOwEeijKP9zZ3gtUQ"/>
-  <PapyrusJava:External xmi:id="_YJ4_QCOwEeijKP9zZ3gtUQ" name="simbad.sim.Wall" base_Classifier="_YJy4oSOwEeijKP9zZ3gtUQ"/>
-  <PapyrusJava:External xmi:id="_YKA7ECOwEeijKP9zZ3gtUQ" name="simbad.sim.Box" base_Classifier="_YJ9QsCOwEeijKP9zZ3gtUQ"/>
-  <PapyrusJava:External xmi:id="_YKqbUCOwEeijKP9zZ3gtUQ" name="simbad.sim.Arch" base_Classifier="_YKVrMCOwEeijKP9zZ3gtUQ"/>
-  <PapyrusJava:External xmi:id="_YLmPcCOwEeijKP9zZ3gtUQ" name="simbad.sim.RangeSensorBelt" base_Classifier="_YLdFgCOwEeijKP9zZ3gtUQ"/>
-  <PapyrusJava:External xmi:id="_YL9b0COwEeijKP9zZ3gtUQ" name="simbad.sim.CameraSensor" base_Classifier="_YL5xcCOwEeijKP9zZ3gtUQ"/>
-  <PapyrusJava:External xmi:id="_YMHM0COwEeijKP9zZ3gtUQ" name="Enum" base_Classifier="_YMDicCOwEeijKP9zZ3gtUQ"/>
   <standard:Create xmi:id="_i40cUCROEeirnb106mTxLg" base_BehavioralFeature="_i4noACROEeirnb106mTxLg"/>
   <standard:Create xmi:id="_i8JdICROEeirnb106mTxLg" base_BehavioralFeature="_i7TIkCROEeirnb106mTxLg"/>
   <standard:Create xmi:id="_i8n-QCROEeirnb106mTxLg" base_BehavioralFeature="_i8Z70CROEeirnb106mTxLg"/>
@@ -553,10 +535,4 @@
   <standard:Create xmi:id="_jJjnACROEeirnb106mTxLg" base_BehavioralFeature="_jJbrMCROEeirnb106mTxLg"/>
   <standard:Create xmi:id="_jMYRgCROEeirnb106mTxLg" base_BehavioralFeature="_jMTZACROEeirnb106mTxLg"/>
   <standard:Create xmi:id="_jXANICROEeirnb106mTxLg" base_BehavioralFeature="_jW6GgCROEeirnb106mTxLg"/>
-  <PapyrusJava:External xmi:id="_GEatwCRXEeiXaYhVonxa5Q" name="Subject" base_Classifier="_jWlWYCROEeirnb106mTxLg"/>
-  <PapyrusJava:External xmi:id="_GEu20CRXEeiXaYhVonxa5Q" name="ROVU_Class_Diagram.Rovu_system.Map" base_Classifier="_GEoJICRXEeiXaYhVonxa5Q"/>
-  <PapyrusJava:External xmi:id="_GE5O4CRXEeiXaYhVonxa5Q" name="ROVU_Class_Diagram.Rovu_system.Task" base_Classifier="_GExTECRXEeiXaYhVonxa5Q"/>
-  <PapyrusJava:External xmi:id="_GGE6oCRXEeiXaYhVonxa5Q" name="ROVU_Class_Diagram.Rovu_system.Observer" base_Classifier="_GF9l4CRXEeiXaYhVonxa5Q"/>
-  <PapyrusJava:External xmi:id="_K0vCICRXEeiXaYhVonxa5Q" name="RobotDirection" base_Classifier="_jWZJICROEeirnb106mTxLg"/>
-  <PapyrusJava:External xmi:id="_63bukCRvEei75a1G5gx9qQ" name="java.awt.image.BufferedImage" base_Classifier="_63WPACRvEei75a1G5gx9qQ"/>
 </xmi:XMI>
