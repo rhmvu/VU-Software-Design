@@ -41,7 +41,6 @@ import nl.vu.cs.s2.simbadtest.ExampleRobot;
  */
 public class Configuration implements ActionListener{
 	
-	public CentralStation centralstation;
 	public Environment environment;
 	
 	private JFrame frame;
