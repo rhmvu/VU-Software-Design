@@ -43,7 +43,7 @@ public class ExampleRobot extends Agent {
             System.out.println("\n\n");
         }
     	
-    	// perform the following actions every 5 virtual seconds
+    	// perform the following actions every 7 virtual seconds
     	if(this.getCounter() % 7 == 0) {
     		if(sonars.getMeasurement(5) > 0.6 && sonars.getMeasurement(6) > 1 && sonars.getMeasurement(7) > 1) {
     			this.setTranslationalVelocity(0.0);
@@ -55,35 +55,6 @@ public class ExampleRobot extends Agent {
     		}else {
     			this.setTranslationalVelocity(0.5);
     		}
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-//	    	if(this.collisionDetected()) {
-//	    		this.currentMode = "avoidObstacle";
-//	    	} else {
-//	    		this.currentMode = "goAround";
-//	    	}
-	        
-//	    	if(this.currentMode == "goAround") {
-//	    		// the robot's speed is always 0.5 m/s
-//	            this.setTranslationalVelocity(0.5);
-//	            
-//	    		// frequently change orientation
-//	            if ((getCounter() % 100) == 0) {
-//	                setRotationalVelocity(Math.PI / 2 * (0.5 - Math.random()));
-//	            }    
-//	        } else {
-//	        	// don't move
-//	        	this.setTranslationalVelocity(0);
-//	        	// rotate only until obstacle is not there
-//	        	setRotationalVelocity(Math.PI / 2);
-//	        }
     	}
     	
     }
