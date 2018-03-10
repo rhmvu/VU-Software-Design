@@ -209,7 +209,7 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_uvK_QCROEeirnb106mTxLg" name="direction" type="_jWZJICROEeirnb106mTxLg"/>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_I7nlkCRxEei75a1G5gx9qQ" name="image" type="_63WPACRvEei75a1G5gx9qQ"/>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_nc06kCRwEei75a1G5gx9qQ" name="saveImage" concurrency="concurrent">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_nc06kCRwEei75a1G5gx9qQ" name="saveImage" visibility="private" concurrency="concurrent">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_vAYyoCRwEei75a1G5gx9qQ" name="image" type="_63WPACRvEei75a1G5gx9qQ"/>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_77J_8CRwEei75a1G5gx9qQ" name="imageName">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>

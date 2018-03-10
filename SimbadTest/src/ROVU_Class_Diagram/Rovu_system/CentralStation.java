@@ -50,7 +50,7 @@ public class CentralStation extends Subject {
 		}
 	}
 	
-	public void saveImage(BufferedImage image, String imageName) {
+	private void saveImage(BufferedImage image, String imageName) {
 		try {
 			File outputFile = new File("images/" + imageName + ".png");
 			ImageIO.write(image, "png", outputFile);
