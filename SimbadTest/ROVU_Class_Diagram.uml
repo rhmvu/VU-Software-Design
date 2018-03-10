@@ -503,7 +503,7 @@
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="_QftXMSRzEeihi78DqqpnUw" name="configuration" type="_i5kDMCROEeirnb106mTxLg" association="_QfriACRzEeihi78DqqpnUw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_VwEdkCRzEeihi78DqqpnUw" memberEnd="_VwFrsSRzEeihi78DqqpnUw _VwGSwSRzEeihi78DqqpnUw">
+    <packagedElement xmi:type="uml:Association" xmi:id="_VwEdkCRzEeihi78DqqpnUw" memberEnd="_VwFrsSRzEeihi78DqqpnUw _VwGSwSRzEeihi78DqqpnUw" navigableOwnedEnd="_VwGSwSRzEeihi78DqqpnUw">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VwFEoCRzEeihi78DqqpnUw" source="org.eclipse.papyrus">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VwFrsCRzEeihi78DqqpnUw" key="nature" value="UML_Nature"/>
       </eAnnotations>
