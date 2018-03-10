@@ -17,6 +17,8 @@ import java.awt.GridLayout;
 import java.awt.LayoutManager;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+
 import javax.vecmath.Color3f;
 import javax.vecmath.Vector3d;
 import javax.vecmath.Vector3f;
@@ -51,6 +53,7 @@ public class Configuration implements ActionListener{
 	private JComboBox<String> bcb;
 	private JComboBox<String> rcb;
 	private JButton start;
+	private File directory;
 	
 	private int nOfArches;
 	private int nOfBoxes;
@@ -58,6 +61,22 @@ public class Configuration implements ActionListener{
 	
 	
 	public void init() {
+		directory = new File("images");
+		if(!directory.exists()) {
+			System.out.println("creating directory: " + directory.getName());
+			boolean result = false;
+			
+			try {
+				directory.mkdir();
+				result = true;
+			}catch(SecurityException e) {
+				System.out.println(e);
+			}
+			if(result) {
+				System.out.println("Directory created");
+			}
+		}
+		
 		frame = new JFrame("Starting the ROVU System");
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

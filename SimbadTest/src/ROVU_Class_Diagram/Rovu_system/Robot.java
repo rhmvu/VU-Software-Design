@@ -74,6 +74,7 @@ public class Robot extends Observer {
 			case goHome:
 				this.moveToStartPosition();
 				goingHome = true;
+				break;
 			
 			default: System.out.printf("Rover %s got an unkown task\n",this.name);
 				break;
@@ -81,7 +82,7 @@ public class Robot extends Observer {
 	}
 	
 	private void sendCoordinates() {
-		this.station.report((int) getCurrentCoordinate()[0] + 9, (int) getCurrentCoordinate()[1] + 9, this, direction[currentDirection], sonars.getMeasurement(6), wallFolowing);
+		this.station.report((int) getCurrentCoordinate()[0] + 9, (int) getCurrentCoordinate()[1] + 9, this, direction[currentDirection], getImage());
 	}
 	
 	public void initBehavior() {
@@ -89,10 +90,12 @@ public class Robot extends Observer {
         goingHome = false;
 	}
 
-	/**
-	 * 
-	 * @return 
-	 */
+	public BufferedImage getImage() {
+		BufferedImage cameraImage = camera.createCompatibleImage();
+		camera.copyVisionImage(cameraImage);
+		return cameraImage;
+	}
+	
 	public double[] getCurrentCoordinate() {
 		double[] returnVec = new double[2];
 		Point3d temp = new Point3d();
