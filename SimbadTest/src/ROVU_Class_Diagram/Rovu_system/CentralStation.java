@@ -117,7 +117,7 @@ public class CentralStation extends Subject {
 			}
 			break;
 		case EAST:
-			if(coordinate2 != 0 && !wallfollowing && map.getGridPointStatus(coordinate1, coordinate2 -1) == GridPointStatus.UNKNOWN) {
+			if(coordinate2 != 0 && !wallfollowing && map.getGridPointStatus(coordinate1 + 1, coordinate2) == GridPointStatus.UNKNOWN) {
 				observer.update(new Task(Request.turnRight));
 			}else if(coordinate2 != 0 && map.getGridPointStatus(coordinate1, coordinate2 - 1) == GridPointStatus.COVERED) {
 				observer.update(new Task(Request.turnLeft));
@@ -127,7 +127,7 @@ public class CentralStation extends Subject {
 			break;
 			
 		}
-		if(map.getCoveredPercentage() > 70.0) {
+		if(map.getCoveredPercentage() > 80.0) {
 			pushTask(new Task(Request.goHome), observers);
 		}
 	}

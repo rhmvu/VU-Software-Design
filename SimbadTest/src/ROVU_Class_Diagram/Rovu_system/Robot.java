@@ -62,7 +62,8 @@ public class Robot extends Observer {
 				wallFolowing = false;
 			break;
 			
-			case turnRight: turnRight();
+			case turnRight: 
+				turnRight();
 				wallFolowing = false;
 			break;
 						
@@ -146,7 +147,7 @@ public class Robot extends Observer {
 	    			if(sonars.getMeasurement(5) > 0.5 && sonars.getMeasurement(6) > 1 && sonars.getMeasurement(7) > 1.5) {
 	    				turnRight();
 	        		}
-	    		}else{
+	    		}else if(wallFolowing){
 	    			if(sonars.getMeasurement(5) > 0.9 && sonars.getMeasurement(6) > 1 && sonars.getMeasurement(7) > 1.5 && wallFolowing) {
 	    				turnRight();
 	        		}
@@ -168,9 +169,8 @@ public class Robot extends Observer {
 		}
     	
     	
-    	if(this.getCounter() % 100 == 0) {
+    	if(this.getCounter() % 100 == 0 && this.name.equals("0")) {
     		System.out.println("Percentage: " + station.map.getCoveredPercentage());
-    		station.map.printField();
     	}
     	
 	}
