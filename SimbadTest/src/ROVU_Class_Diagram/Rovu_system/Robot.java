@@ -82,7 +82,7 @@ public class Robot extends Observer {
 	}
 	
 	private void sendCoordinates() {
-		this.station.report((int) getCurrentCoordinate()[0] + 9, (int) getCurrentCoordinate()[1] + 9, this, direction[currentDirection], getImage());
+		this.station.report((int) getCurrentCoordinate()[0] + 9, (int) getCurrentCoordinate()[1] + 9, this, direction[currentDirection], getImage(), sonars.getMeasurement(5), sonars.getMeasurement(6), sonars.getMeasurement(7), wallFolowing);
 	}
 	
 	public void initBehavior() {
@@ -160,7 +160,7 @@ public class Robot extends Observer {
 	    		}
 	    	}
 	    	if(sendCoordinatesWithInterval == true) {
-	    		if(this.getCounter() % 10 == 0) {
+	    		if(this.getCounter() % 15 == 0) {
 	        		//station.report(this);
 	        		sendCoordinates();
 	        	}
@@ -170,6 +170,7 @@ public class Robot extends Observer {
     	
     	if(this.getCounter() % 100 == 0) {
     		System.out.println("Percentage: " + station.map.getCoveredPercentage());
+    		station.map.printField();
     	}
     	
 	}
