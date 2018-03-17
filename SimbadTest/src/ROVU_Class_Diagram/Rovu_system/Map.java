@@ -9,6 +9,8 @@ import ROVU_Class_Diagram.Rovu_system.GridPoint;
 import ROVU_Class_Diagram.Rovu_system.GridPointStatus;
 import javax.vecmath.Vector3d;
 
+import org.omg.CORBA.OBJ_ADAPTER;
+
 
 public class Map {
 	
@@ -62,5 +64,28 @@ public class Map {
 			}
 		}
 		coveredPercentage = (objectGridPoints + coveredGridPoints) / numberOfGridPoints * 100;
+	}
+	
+	//Testing method
+	public void printField() {
+		for(int i = 0; i < 20; i++) {
+			for(int x = 19; x > -1; x--) {
+				switch(getGridPointStatus(i, x)) {
+				case UNKNOWN:
+					System.out.print(0 + " ");
+					break;
+				case COVERED:
+					System.out.print(1 + " ");
+					break;
+				case OBSTACLE:
+					System.out.print(2 + " ");
+					break;
+					default:
+						break;
+				}
+				
+			}
+			System.out.println("");
+		}
 	}
 };
