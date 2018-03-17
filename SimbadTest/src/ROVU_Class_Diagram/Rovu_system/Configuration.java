@@ -28,7 +28,7 @@ import simbad.sim.EnvironmentDescription;
 import simbad.sim.Wall;
 
 import javax.swing.*;
-
+import javax.swing.border.EmptyBorder;
 
 import ROVU_Class_Diagram.Rovu_system.CentralStation;
 import ROVU_Class_Diagram.Rovu_system.ObstacleFactory;
@@ -40,27 +40,52 @@ import nl.vu.cs.s2.simbadtest.ExampleRobot;
  * 
  */
 public class Configuration implements ActionListener{
-	
+
 	public Environment environment;
-	
+
 	private JFrame frame;
 	private JPanel panel;
-	private JLabel arches;
-	private JLabel boxes;
-	private JLabel robots;
-	private JComboBox<String> acb;
-	private JComboBox<String> bcb;
-	private JComboBox<String> rcb;
-	private JButton start;
-	private File directory;
-	
-	private int nOfArches;
-	private int nOfBoxes;
-	private int nOfRobots;
-	
-	
+	JComboBox<Integer> boxes;
+	JComboBox<Integer> robots;
+
+
 	public void init() {
-		directory = new File("images");
+		frame = new JFrame("ROVU System");
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(500, 500);
+		frame.setLocation(800,300);
+
+		GridLayout layout = new GridLayout(3, 2); 
+		layout.setVgap(20);
+		layout.setHgap(80);
+		panel = new JPanel(layout);
+		panel.setBorder(new EmptyBorder(10, 10, 10, 10));
+
+		JLabel boxesLabel = new JLabel("Number of boxes");
+		JLabel robotsLabel = new JLabel("Number of robots");
+
+		boxes = new JComboBox<>(new Integer[] {0, 1, 2, 3, 4});
+		robots = new JComboBox<>(new Integer[] {1, 2, 3, 4});
+		JButton start = new JButton("Start");
+		JButton stop = new JButton("Stop");
+		start.addActionListener(this);
+		stop.addActionListener(this);
+
+		panel.add(boxesLabel);
+		panel.add(boxes);
+		panel.add(robotsLabel);
+		panel.add(robots);
+		panel.add(start);
+		panel.add(stop);
+
+		frame.add(panel);
+		frame.pack();
+		frame.setVisible(true);
+	}
+	
+	private void createDirectory() {
+		File directory = new File("images");
 		if(!directory.exists()) {
 			System.out.println("creating directory: " + directory.getName());
 			boolean result = false;
@@ -75,76 +100,28 @@ public class Configuration implements ActionListener{
 				System.out.println("Directory created");
 			}
 		}
-		
-		frame = new JFrame("Starting the ROVU System");
-		frame.setVisible(true);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	    frame.setSize(350, 300);
-	    frame.setLocation(430, 100);
-	    
-	    panel = new JPanel();
-	    panel.setLayout(new FlowLayout(FlowLayout.LEFT));
-	    frame.add(panel);
-	    
-	    //Will be added later if possible
-//	    arches = new JLabel("Pick a number of arches for in the environment");
-//	    arches.setVisible(true);
-//	    panel.add(arches);
-//	    
-//	    String[] archChoices = {"0", "1", "2"};
-//	    acb = new JComboBox<String>(archChoices);
-//	    acb.setSelectedItem("2");
-//	    acb.setVisible(true);
-//	    panel.add(acb);
-	    
-	    boxes = new JLabel("Pick a number of boxes for in the environment");
-	    boxes.setVisible(true);
-	    panel.add(boxes);
-	    
-	    String[] boxChoices = {"0", "1", "2", "3", "4"};
-	    bcb = new JComboBox<String>(boxChoices);
-	    bcb.setSelectedItem("4");
-	    bcb.setVisible(true);
-	    panel.add(bcb);
-	    
-	    robots = new JLabel("Pick a number of robots for in the environment");
-	    robots.setVisible(true);
-	    panel.add(robots);
-	    
-	    String[] numberOfRobots = {"1", "2", "3", "4"};
-	    rcb = new JComboBox<String>(numberOfRobots);
-	    rcb.setSelectedItem("4");
-	    rcb.setVisible(true);
-	    panel.add(rcb);
-	    
-	    start = new JButton("Start");
-	    start.addActionListener(this);
-	    start.setVisible(true);
-	    panel.add(start);
-	    
-	    panel.validate();
-	    panel.repaint();
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-//		nOfArches = acb.getSelectedIndex();
-		nOfBoxes = bcb.getSelectedIndex();
-		nOfRobots = rcb.getSelectedIndex() + 1;
-		frame.dispose();
-		
-		// request antialising so that diagonal lines are not "stairy"
-        System.setProperty("j3d.implicitAntialiasing", "true");
-        
-        environment = new Environment(nOfArches, nOfBoxes, nOfRobots);
-//        Robot r = new Robot(new Vector3d(-9.25, 0, 9.25), "Robot 1");
-//        environment.add(r);
-        
-        Simbad simframe = new Simbad(environment, false);
-        simframe.update(simframe.getGraphics());
-        environment.rotateForStartingPosition();
-        environment.station.start();
+		if(e.getActionCommand().equals("Start")){
+			createDirectory();
+			
+			int nOfBoxes = boxes.getSelectedIndex();
+			int nOfRobots = robots.getSelectedIndex();
+			// request antialising so that diagonal lines are not "stairy"
+			System.setProperty("j3d.implicitAntialiasing", "true");
 
-		
+			environment = new Environment(0, nOfBoxes, nOfRobots);
+
+			Simbad simframe = new Simbad(environment, false);
+			simframe.update(simframe.getGraphics());
+			environment.rotateForStartingPosition();
+			environment.station.start();
+
+		} else if(e.getActionCommand().equals("Stop")) {
+			frame.dispose();
+			System.exit(0);
+		} 
 	}
 };

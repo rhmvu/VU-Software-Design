@@ -169,7 +169,7 @@ public class Robot extends Observer {
 		}
     	
     	
-    	if(this.getCounter() % 100 == 0 && this.name.equals("0")) {
+    	if(this.getCounter() % 10 == 0) {
     		System.out.println("Percentage: " + station.map.getCoveredPercentage());
     	}
     	
