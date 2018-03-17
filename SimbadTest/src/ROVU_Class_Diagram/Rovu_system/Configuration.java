@@ -107,8 +107,8 @@ public class Configuration implements ActionListener{
 		if(e.getActionCommand().equals("Start")){
 			createDirectory();
 			
-			int nOfBoxes = boxes.getSelectedIndex();
-			int nOfRobots = robots.getSelectedIndex();
+			int nOfBoxes = (Integer) boxes.getSelectedItem();
+			int nOfRobots = (Integer) robots.getSelectedItem();
 			// request antialising so that diagonal lines are not "stairy"
 			System.setProperty("j3d.implicitAntialiasing", "true");
 
