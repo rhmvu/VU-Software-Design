@@ -39,9 +39,8 @@ import nl.vu.cs.s2.simbadtest.ExampleRobot;
 /**
  * 
  */
-public class Configuration implements ActionListener{
+public class Configuration{
 	
-	public CentralStation centralstation;
 	public Environment environment;
 	
 	private JFrame frame;
@@ -53,6 +52,7 @@ public class Configuration implements ActionListener{
 	private JComboBox<String> bcb;
 	private JComboBox<String> rcb;
 	private JButton start;
+	private JButton stop;
 	private File directory;
 	
 	private int nOfArches;
@@ -81,22 +81,11 @@ public class Configuration implements ActionListener{
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    frame.setSize(350, 300);
-	    frame.setLocation(430, 100);
+	    frame.setLocation(830, 100);
 	    
 	    panel = new JPanel();
 	    panel.setLayout(new FlowLayout(FlowLayout.LEFT));
 	    frame.add(panel);
-	    
-	    //Will be added later if possible
-//	    arches = new JLabel("Pick a number of arches for in the environment");
-//	    arches.setVisible(true);
-//	    panel.add(arches);
-//	    
-//	    String[] archChoices = {"0", "1", "2"};
-//	    acb = new JComboBox<String>(archChoices);
-//	    acb.setSelectedItem("2");
-//	    acb.setVisible(true);
-//	    panel.add(acb);
 	    
 	    boxes = new JLabel("Pick a number of boxes for in the environment");
 	    boxes.setVisible(true);
@@ -119,33 +108,50 @@ public class Configuration implements ActionListener{
 	    panel.add(rcb);
 	    
 	    start = new JButton("Start");
-	    start.addActionListener(this);
+	    start.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				nOfBoxes = bcb.getSelectedIndex();
+				nOfRobots = rcb.getSelectedIndex() + 1;
+				
+				//We are aware that the disable method of the type JComponent is deprecated. It does the job so we decided to use it anyway.
+				rcb.setEnabled(false);
+				bcb.setEnabled(false);
+				start.setEnabled(false);
+				
+				
+				// request antialising so that diagonal lines are not "stairy"
+		        System.setProperty("j3d.implicitAntialiasing", "true");
+		        
+		        environment = new Environment(nOfArches, nOfBoxes, nOfRobots);
+		        
+		        Simbad simframe = new Simbad(environment, false);
+		        simframe.update(simframe.getGraphics());	
+		        environment.rotateForStartingPosition();
+		        environment.station.start();
+		        stop.setEnabled(true);
+				
+			}
+		});
 	    start.setVisible(true);
 	    panel.add(start);
 	    
+	    stop = new JButton("Stop");
+	    stop.setEnabled(false);
+	    stop.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				environment.stop();	
+				JOptionPane.showMessageDialog(frame, "Mission has stopped and can not be started again!");
+				stop.setEnabled(false);
+			}
+		});
+	    stop.setVisible(true);
+	    panel.add(stop);
+	    
 	    panel.validate();
 	    panel.repaint();
-	}
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-//		nOfArches = acb.getSelectedIndex();
-		nOfBoxes = bcb.getSelectedIndex();
-		nOfRobots = rcb.getSelectedIndex() + 1;
-		frame.dispose();
-		
-		// request antialising so that diagonal lines are not "stairy"
-        System.setProperty("j3d.implicitAntialiasing", "true");
-        
-        environment = new Environment(nOfArches, nOfBoxes, nOfRobots);
-//        Robot r = new Robot(new Vector3d(-9.25, 0, 9.25), "Robot 1");
-//        environment.add(r);
-        
-        Simbad simframe = new Simbad(environment, false);
-        simframe.update(simframe.getGraphics());
-        environment.rotateForStartingPosition();
-        environment.station.start();
-
-		
 	}
 };

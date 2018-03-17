@@ -31,6 +31,7 @@ public class Environment extends EnvironmentDescription {
 	private final int MAPSIZE = 20;
 	
 	private ObstacleFactory fac;
+	private boolean running;
 	public CentralStation station;
 	public Robot robot[];
 	
@@ -86,12 +87,18 @@ public class Environment extends EnvironmentDescription {
 			this.add(robot[i]);
 			robot[i].setStation(station);
 			System.out.println("Robot coordinates: " + STARTING_COORDINATES[i] + " Facing: " + robot[i].getDirection());
-		}  
+		}
 	}
 	
 	public void rotateForStartingPosition() {
 		for (int i = 0; i < robot.length; i++) {
 			robot[i].rotateY(STARTING_ROTATION[i]);
 		} 
+	}
+	
+	public void stop() {
+		for(int i = 0; i < robot.length; i++) {
+			robot[i].stop();
+		}
 	}
 };
