@@ -33,6 +33,7 @@ public class Robot extends Observer {
 	private boolean lastTurnLeft;
 	private boolean wallFolowing;
 	private boolean goingHome;
+	private boolean running;
 	
 	private final RobotDirection[] direction = {RobotDirection.NORTH, RobotDirection.WEST, RobotDirection.SOUTH, RobotDirection.EAST}; 
 	private int currentDirection;
@@ -44,6 +45,7 @@ public class Robot extends Observer {
 	    camera = RobotFactory.addCameraSensor(this);
 	    lastTurnLeft = false;
 	    sendCoordinatesWithInterval = false;
+        running = true;
 	}
 	
 	public void setStation(CentralStation station) {
@@ -89,6 +91,7 @@ public class Robot extends Observer {
 	public void initBehavior() {
         System.out.println("I exist and my name is " + this.name);
         goingHome = false;
+
 	}
 
 	public BufferedImage getImage() {
@@ -136,42 +139,45 @@ public class Robot extends Observer {
 		this.rotateY(Math.PI / 2 * 3);
 	}
 
-	/**
-	 * 
-	 */
+	public void stop() {
+		running = false;
+		this.setTranslationalVelocity(0.0);
+	}
+	
 	public void performBehavior() {
-		// perform the following actions every 7 virtual seconds
-		if(!goingHome) {
-			if(this.getCounter() % 6 == 0) {
-	    		if(lastTurnLeft && wallFolowing) {
-	    			if(sonars.getMeasurement(5) > 0.5 && sonars.getMeasurement(6) > 1 && sonars.getMeasurement(7) > 1.5) {
-	    				turnRight();
-	        		}
-	    		}else if(wallFolowing){
-	    			if(sonars.getMeasurement(5) > 0.9 && sonars.getMeasurement(6) > 1 && sonars.getMeasurement(7) > 1.5 && wallFolowing) {
-	    				turnRight();
-	        		}
-	    		}
-	    		
-	    		if(sonars.getMeasurement(0) < 0.28) {
-	    			wallFolowing = true;
-	    			turnLeft();
-	    		}else {
-	    			this.setTranslationalVelocity(0.5);
-	    		}
-	    	}
-	    	if(sendCoordinatesWithInterval == true) {
-	    		if(this.getCounter() % 15 == 0) {
-	        		//station.report(this);
-	        		sendCoordinates();
-	        	}
+		if(running) {
+			// perform the following actions every 7 virtual seconds
+			if(!goingHome) {
+				if(this.getCounter() % 6 == 0) {
+		    		if(lastTurnLeft && wallFolowing) {
+		    			if(sonars.getMeasurement(5) > 0.5 && sonars.getMeasurement(6) > 1 && sonars.getMeasurement(7) > 1.5) {
+		    				turnRight();
+		        		}
+		    		}else if(wallFolowing){
+		    			if(sonars.getMeasurement(5) > 0.9 && sonars.getMeasurement(6) > 1 && sonars.getMeasurement(7) > 1.5 && wallFolowing) {
+		    				turnRight();
+		        		}
+		    		}
+		    		
+		    		if(sonars.getMeasurement(0) < 0.28) {
+		    			wallFolowing = true;
+		    			turnLeft();
+		    		}else {
+		    			this.setTranslationalVelocity(0.5);
+		    		}
+		    	}
+		    	if(sendCoordinatesWithInterval == true) {
+		    		if(this.getCounter() % 15 == 0) {
+		        		//station.report(this);
+		        		sendCoordinates();
+		        	}
+		    	}
+			}
+	    	
+	    	
+	    	if(this.getCounter() % 100 == 0 && this.name.equals("0")) {
+	    		System.out.println("Percentage: " + station.map.getCoveredPercentage());
 	    	}
 		}
-    	
-    	
-    	if(this.getCounter() % 10 == 0) {
-    		System.out.println("Percentage: " + station.map.getCoveredPercentage());
-    	}
-    	
 	}
 };

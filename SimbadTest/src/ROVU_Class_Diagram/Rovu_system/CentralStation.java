@@ -127,7 +127,7 @@ public class CentralStation extends Subject {
 			break;
 			
 		}
-		if(map.getCoveredPercentage() > 70.0) {
+		if(map.getCoveredPercentage() > 80.0) {
 			pushTask(new Task(Request.goHome), observers);
 		}
 	}

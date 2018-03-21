@@ -39,16 +39,27 @@ import nl.vu.cs.s2.simbadtest.ExampleRobot;
 /**
  * 
  */
-public class Configuration implements ActionListener{
-
+public class Configuration{
+	
 	public Environment environment;
 
 	private JFrame frame;
 	private JPanel panel;
-	JComboBox<Integer> boxes;
-	JComboBox<Integer> robots;
-
-
+	private JLabel arches;
+	private JLabel boxes;
+	private JLabel robots;
+	private JComboBox<String> acb;
+	private JComboBox<String> bcb;
+	private JComboBox<String> rcb;
+	private JButton start;
+	private JButton stop;
+	private File directory;
+	
+	private int nOfArches;
+	private int nOfBoxes;
+	private int nOfRobots;
+	
+	
 	public void init() {
 		frame = new JFrame("ROVU System");
 		frame.setVisible(true);
@@ -100,28 +111,82 @@ public class Configuration implements ActionListener{
 				System.out.println("Directory created");
 			}
 		}
-	}
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		if(e.getActionCommand().equals("Start")){
-			createDirectory();
+		
+		frame = new JFrame("Starting the ROVU System");
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    frame.setSize(350, 300);
+	    frame.setLocation(830, 100);
+	    
+	    panel = new JPanel();
+	    panel.setLayout(new FlowLayout(FlowLayout.LEFT));
+	    frame.add(panel);
+	    
+	    boxes = new JLabel("Pick a number of boxes for in the environment");
+	    boxes.setVisible(true);
+	    panel.add(boxes);
+	    
+	    String[] boxChoices = {"0", "1", "2", "3", "4"};
+	    bcb = new JComboBox<String>(boxChoices);
+	    bcb.setSelectedItem("4");
+	    bcb.setVisible(true);
+	    panel.add(bcb);
+	    
+	    robots = new JLabel("Pick a number of robots for in the environment");
+	    robots.setVisible(true);
+	    panel.add(robots);
+	    
+	    String[] numberOfRobots = {"1", "2", "3", "4"};
+	    rcb = new JComboBox<String>(numberOfRobots);
+	    rcb.setSelectedItem("4");
+	    rcb.setVisible(true);
+	    panel.add(rcb);
+	    
+	    start = new JButton("Start");
+	    start.addActionListener(new ActionListener() {
 			
-			int nOfBoxes = (Integer) boxes.getSelectedItem();
-			int nOfRobots = (Integer) robots.getSelectedItem();
-			// request antialising so that diagonal lines are not "stairy"
-			System.setProperty("j3d.implicitAntialiasing", "true");
-
-			environment = new Environment(0, nOfBoxes, nOfRobots);
-
-			Simbad simframe = new Simbad(environment, false);
-			simframe.update(simframe.getGraphics());
-			environment.rotateForStartingPosition();
-			environment.station.start();
-
-		} else if(e.getActionCommand().equals("Stop")) {
-			frame.dispose();
-			System.exit(0);
-		} 
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				nOfBoxes = bcb.getSelectedIndex();
+				nOfRobots = rcb.getSelectedIndex() + 1;
+				
+				//We are aware that the disable method of the type JComponent is deprecated. It does the job so we decided to use it anyway.
+				rcb.setEnabled(false);
+				bcb.setEnabled(false);
+				start.setEnabled(false);
+				
+				
+				// request antialising so that diagonal lines are not "stairy"
+		        System.setProperty("j3d.implicitAntialiasing", "true");
+		        
+		        environment = new Environment(nOfArches, nOfBoxes, nOfRobots);
+		        
+		        Simbad simframe = new Simbad(environment, false);
+		        simframe.update(simframe.getGraphics());	
+		        environment.rotateForStartingPosition();
+		        environment.station.start();
+		        stop.setEnabled(true);
+				
+			}
+		});
+	    start.setVisible(true);
+	    panel.add(start);
+	    
+	    stop = new JButton("Stop");
+	    stop.setEnabled(false);
+	    stop.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				environment.stop();	
+				JOptionPane.showMessageDialog(frame, "Mission has stopped and can not be started again!");
+				stop.setEnabled(false);
+			}
+		});
+	    stop.setVisible(true);
+	    panel.add(stop);
+	    
+	    panel.validate();
+	    panel.repaint();
 	}
 };
