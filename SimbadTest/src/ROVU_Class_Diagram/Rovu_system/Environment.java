@@ -26,12 +26,10 @@ public class Environment extends EnvironmentDescription {
 	private final Vector3d[] STARTING_COORDINATES = {new Vector3d(9.5, 0, -9.5), new Vector3d(-9.5, 0, -9.5), new Vector3d(-9.5, 0, 9.5), new Vector3d(9.5, 0, 9.5)};
 	private final Vector3d[] BOX_COORDINATES = {new Vector3d(0, 0, 8.5), new Vector3d(0, 0, -8.5), new Vector3d(-9, 0, 0), new Vector3d(9, 0, 0)};
 	private final Vector3f BOX_SIZE = new Vector3f(2, 1, 3);
-	private final Vector3d[] ARCH_COORDINATES = {new Vector3d(-7.6, 0, 0), new Vector3d(-7.6, 0, 1), new Vector3d(7.6, 0, 0), new Vector3d(7.6, 0, 1)};
 	private final double STARTING_ROTATION[] = {Math.PI, Math.PI / 2 * 3, 0.0, Math.PI / 2}; 
 	private final int MAPSIZE = 20;
 	
 	private ObstacleFactory fac;
-	private boolean running;
 	public CentralStation station;
 	public Robot robot[];
 	
