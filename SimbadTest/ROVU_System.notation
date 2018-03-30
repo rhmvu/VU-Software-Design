@@ -926,5 +926,19 @@
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_31ur4DQ4EeirYo_nbsYNJw" id="(0.5,0.9528571428571428)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_31vS8DQ4EeirYo_nbsYNJw" id="(0.5,0.9528571428571428)"/>
     </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_kApKQDRYEeilkZ1r1KSWNA" type="Message_AsynchEdge" source="_KJGu4DQ0EeirYo_nbsYNJw" target="_tKEzwDQzEeirYo_nbsYNJw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_kAqYYDRYEeilkZ1r1KSWNA" type="Message_AsynchNameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_kAq_cDRYEeilkZ1r1KSWNA" x="1" y="-13"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_kAq_cTRYEeilkZ1r1KSWNA" type="Message_AsynchStereotypeLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_kAq_cjRYEeilkZ1r1KSWNA" x="1" y="-33"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_kApKQTRYEeilkZ1r1KSWNA"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_kAq_czRYEeilkZ1r1KSWNA"/>
+      <element xmi:type="uml:Message" href="ROVU_System.uml#_j8lwsDRYEeilkZ1r1KSWNA"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kApKQjRYEeilkZ1r1KSWNA" points="[0, 0, -280, 0]$[280, 0, 0, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kCj10DRYEeilkZ1r1KSWNA" id="(0.5,0.9814285714285714)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kCj10TRYEeilkZ1r1KSWNA" id="(0.5,0.9814285714285714)"/>
+    </edges>
   </notation:Diagram>
 </xmi:XMI>
