@@ -36,7 +36,7 @@ public class Environment extends EnvironmentDescription {
 	public Robot robot[];
 	
 	
-	public Environment(int arches, int boxes, int robots) {
+	public Environment(int boxes, int robots) {
 		robot = new Robot[robots];
 		fac = new ObstacleFactory();
 		this.station = CentralStation.getInstance();
