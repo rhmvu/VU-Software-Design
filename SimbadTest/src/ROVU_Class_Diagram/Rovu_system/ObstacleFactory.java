@@ -25,8 +25,4 @@ public class ObstacleFactory {
 	public Box getBox(Vector3d vec, Vector3f vec2, Environment env) {
 		return new Box(vec, vec2, env);
 	}
-	
-	public Arch getArch(Vector3d vec, Environment env) {
-		return new Arch(vec, env);
-	}
 };
