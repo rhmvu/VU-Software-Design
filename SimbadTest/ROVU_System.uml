@@ -145,5 +145,20 @@ by robot for the first time.&#xD;
     <message xmi:type="uml:Message" xmi:id="_xGcDADQwEeirYo_nbsYNJw" name="Task: Direction" messageSort="asynchCall"/>
     <message xmi:type="uml:Message" xmi:id="_hOUo4DQyEeirYo_nbsYNJw" name="Task: goHome" messageSort="asynchCall" receiveEvent="_hOVP8TQyEeirYo_nbsYNJw" sendEvent="_hOVP8DQyEeirYo_nbsYNJw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Interaction" xmi:id="_KX8RkDQzEeirYo_nbsYNJw" name="Mission Startup"/>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_KX8RkDQzEeirYo_nbsYNJw" name="Mission Startup">
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_tKCXgDQzEeirYo_nbsYNJw" name="Robot" coveredBy="_ewhCUDQ1EeirYo_nbsYNJw"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_KJESoDQ0EeirYo_nbsYNJw" name="CentralStation" coveredBy="_c_KZcDQ1EeirYo_nbsYNJw _ewgbQDQ1EeirYo_nbsYNJw"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_L09MsDQ0EeirYo_nbsYNJw" name="Configuration" coveredBy="_aOV3oDQ1EeirYo_nbsYNJw _c_JyYDQ1EeirYo_nbsYNJw"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_ROQMoDQ0EeirYo_nbsYNJw" name="Main" coveredBy="_aOUpgDQ1EeirYo_nbsYNJw"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_tWEWcDQ1EeirYo_nbsYNJw" name="Setup Frame"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_aOUpgDQ1EeirYo_nbsYNJw" name="Message1SendEvent" covered="_ROQMoDQ0EeirYo_nbsYNJw" message="_aOS0UDQ1EeirYo_nbsYNJw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_aOV3oDQ1EeirYo_nbsYNJw" name="Message1ReceiveEvent" covered="_L09MsDQ0EeirYo_nbsYNJw" message="_aOS0UDQ1EeirYo_nbsYNJw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_c_JyYDQ1EeirYo_nbsYNJw" name="Message1SendEvent" covered="_L09MsDQ0EeirYo_nbsYNJw" message="_c_JLUDQ1EeirYo_nbsYNJw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_c_KZcDQ1EeirYo_nbsYNJw" name="Message1ReceiveEvent" covered="_KJESoDQ0EeirYo_nbsYNJw" message="_c_JLUDQ1EeirYo_nbsYNJw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ewgbQDQ1EeirYo_nbsYNJw" name="Message1SendEvent" covered="_KJESoDQ0EeirYo_nbsYNJw" message="_ewf0MDQ1EeirYo_nbsYNJw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ewhCUDQ1EeirYo_nbsYNJw" name="Message1ReceiveEvent" covered="_tKCXgDQzEeirYo_nbsYNJw" message="_ewf0MDQ1EeirYo_nbsYNJw"/>
+    <message xmi:type="uml:Message" xmi:id="_aOS0UDQ1EeirYo_nbsYNJw" name="Create" messageSort="asynchCall" receiveEvent="_aOV3oDQ1EeirYo_nbsYNJw" sendEvent="_aOUpgDQ1EeirYo_nbsYNJw"/>
+    <message xmi:type="uml:Message" xmi:id="_c_JLUDQ1EeirYo_nbsYNJw" name="Create" messageSort="asynchCall" receiveEvent="_c_KZcDQ1EeirYo_nbsYNJw" sendEvent="_c_JyYDQ1EeirYo_nbsYNJw"/>
+    <message xmi:type="uml:Message" xmi:id="_ewf0MDQ1EeirYo_nbsYNJw" name="Create" messageSort="asynchCall" receiveEvent="_ewhCUDQ1EeirYo_nbsYNJw" sendEvent="_ewgbQDQ1EeirYo_nbsYNJw"/>
+  </packagedElement>
 </uml:Model>
