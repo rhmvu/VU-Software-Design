@@ -182,7 +182,7 @@
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_i5JzgCROEeirnb106mTxLg" value="*"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_i5LBoCROEeirnb106mTxLg" name="report" visibility="private" method="_VTeC4CxPEeiJp9MjNj5vOw">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_i5LBoCROEeirnb106mTxLg" name="report" visibility="private">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_i5LosCROEeirnb106mTxLg" name="coordinate1">
             <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
           </ownedParameter>
@@ -368,7 +368,7 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_jM-HYCROEeirnb106mTxLg" name="getDirection" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_jM-ucCROEeirnb106mTxLg" type="_jWZJICROEeirnb106mTxLg" direction="return"/>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_jNBxwCROEeirnb106mTxLg" name="turnLeft" visibility="public" method="_0tidECxPEeiJp9MjNj5vOw"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_jNBxwCROEeirnb106mTxLg" name="turnLeft" visibility="public"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_jNH4YCROEeirnb106mTxLg" name="performBehavior" visibility="public"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_Yz2CgCRxEei75a1G5gx9qQ" name="getImage">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_lorm8CRxEei75a1G5gx9qQ" name="cameraImage" type="_63WPACRvEei75a1G5gx9qQ" direction="return"/>
@@ -495,102 +495,100 @@
     </packagedElement>
     <packagedElement xmi:type="uml:StateMachine" xmi:id="_gXwpACxKEeiJp9MjNj5vOw" name="Robot">
       <region xmi:type="uml:Region" xmi:id="_iKJzsCxKEeiJp9MjNj5vOw" name="Region1">
-        <transition xmi:type="uml:Transition" xmi:id="_FaUJkDM5EeiMfrziXIOBCQ" name="Every 6 virtual seconds" source="_2mLm4DM4EeiMfrziXIOBCQ" target="_OZjaMCxOEeiJp9MjNj5vOw"/>
-        <transition xmi:type="uml:Transition" xmi:id="_HQjScDM5EeiMfrziXIOBCQ" name="new task" source="_2mLm4DM4EeiMfrziXIOBCQ" target="_4DBvACxLEeiJp9MjNj5vOw"/>
-        <transition xmi:type="uml:Transition" xmi:id="_mBvSQDM6EeiMfrziXIOBCQ" source="_4DBvACxLEeiJp9MjNj5vOw" target="_kzldEDM6EeiMfrziXIOBCQ"/>
-        <subvertex xmi:type="uml:State" xmi:id="_4DBvACxLEeiJp9MjNj5vOw" name="Update">
-          <region xmi:type="uml:Region" xmi:id="_LSsB0CxMEeiJp9MjNj5vOw" name="Region1">
-            <transition xmi:type="uml:Transition" xmi:id="_U3QIUCxMEeiJp9MjNj5vOw" source="_LSvFICxMEeiJp9MjNj5vOw" target="_MhuAwCxMEeiJp9MjNj5vOw"/>
-            <transition xmi:type="uml:Transition" xmi:id="_RWFikDM6EeiMfrziXIOBCQ" source="_MhuAwCxMEeiJp9MjNj5vOw" target="_NESWMDM6EeiMfrziXIOBCQ"/>
-            <subvertex xmi:type="uml:Pseudostate" xmi:id="_LSvFICxMEeiJp9MjNj5vOw" name=""/>
-            <subvertex xmi:type="uml:State" xmi:id="_MhuAwCxMEeiJp9MjNj5vOw" name="ExecuteTask">
-              <region xmi:type="uml:Region" xmi:id="_0nyhwSxMEeiJp9MjNj5vOw" name="Region1">
-                <transition xmi:type="uml:Transition" xmi:id="_BK5dACxNEeiJp9MjNj5vOw" name="[task = turnLeft]" source="_4y7FcCxMEeiJp9MjNj5vOw" target="_0n1lECxMEeiJp9MjNj5vOw"/>
-                <transition xmi:type="uml:Transition" xmi:id="_M1cYkCxNEeiJp9MjNj5vOw" name="[task = turnRight]" source="_4y7FcCxMEeiJp9MjNj5vOw" target="_GBib0CxNEeiJp9MjNj5vOw"/>
-                <transition xmi:type="uml:Transition" xmi:id="_gdxDACxNEeiJp9MjNj5vOw" name="[task = sendCoordinatesWithIntervalAndWallFollowing]" source="_4y7FcCxMEeiJp9MjNj5vOw" target="_dfy2ACxNEeiJp9MjNj5vOw"/>
-                <transition xmi:type="uml:Transition" xmi:id="_sFTG0CxNEeiJp9MjNj5vOw" name="[task = goHome]" source="_4y7FcCxMEeiJp9MjNj5vOw" target="_j-f-0CxNEeiJp9MjNj5vOw"/>
-                <transition xmi:type="uml:Transition" xmi:id="_6ybvcDM5EeiMfrziXIOBCQ" source="_0n1lECxMEeiJp9MjNj5vOw" target="_zmLkIDM5EeiMfrziXIOBCQ"/>
-                <transition xmi:type="uml:Transition" xmi:id="__yRtkDM5EeiMfrziXIOBCQ" source="_GBib0CxNEeiJp9MjNj5vOw" target="_7YjUQDM5EeiMfrziXIOBCQ"/>
-                <transition xmi:type="uml:Transition" xmi:id="_DnqDsDM6EeiMfrziXIOBCQ" source="_dfy2ACxNEeiJp9MjNj5vOw" target="_8VZXADM5EeiMfrziXIOBCQ"/>
-                <transition xmi:type="uml:Transition" xmi:id="_GP8UkDM6EeiMfrziXIOBCQ" source="_j-f-0CxNEeiJp9MjNj5vOw" target="_ESAoQDM6EeiMfrziXIOBCQ"/>
-                <subvertex xmi:type="uml:State" xmi:id="_0n1lECxMEeiJp9MjNj5vOw" name="TurnLeft">
-                  <entry xmi:type="uml:Activity" xmi:id="_0tidECxPEeiJp9MjNj5vOw" name="turnLeft" specification="_jNBxwCROEeirnb106mTxLg"/>
-                </subvertex>
-                <subvertex xmi:type="uml:Pseudostate" xmi:id="_4y7FcCxMEeiJp9MjNj5vOw" name=""/>
-                <subvertex xmi:type="uml:State" xmi:id="_GBib0CxNEeiJp9MjNj5vOw" name="TurnRight">
-                  <entry xmi:type="uml:Activity" xmi:id="_37_9ICxPEeiJp9MjNj5vOw" name="turnRight"/>
-                </subvertex>
-                <subvertex xmi:type="uml:State" xmi:id="_dfy2ACxNEeiJp9MjNj5vOw" name="sendCoordinatesWithIntervalAndWallFollowing">
-                  <entry xmi:type="uml:Activity" xmi:id="_JBmzMCxQEeiJp9MjNj5vOw" name="boolean=true"/>
-                </subvertex>
-                <subvertex xmi:type="uml:State" xmi:id="_j-f-0CxNEeiJp9MjNj5vOw" name="GoHome">
-                  <entry xmi:type="uml:Activity" xmi:id="_nTCm0CxPEeiJp9MjNj5vOw" name="moveToStartPosition"/>
-                </subvertex>
-                <subvertex xmi:type="uml:FinalState" xmi:id="_zmLkIDM5EeiMfrziXIOBCQ" name=""/>
-                <subvertex xmi:type="uml:FinalState" xmi:id="_7YjUQDM5EeiMfrziXIOBCQ" name=""/>
-                <subvertex xmi:type="uml:FinalState" xmi:id="_8VZXADM5EeiMfrziXIOBCQ"/>
-                <subvertex xmi:type="uml:FinalState" xmi:id="_ESAoQDM6EeiMfrziXIOBCQ"/>
-              </region>
-            </subvertex>
-            <subvertex xmi:type="uml:FinalState" xmi:id="_NESWMDM6EeiMfrziXIOBCQ"/>
-          </region>
-        </subvertex>
-        <subvertex xmi:type="uml:State" xmi:id="_OZjaMCxOEeiJp9MjNj5vOw" name="performBehavior">
-          <region xmi:type="uml:Region" xmi:id="_wv8bkCxOEeiJp9MjNj5vOw" name="Region1">
-            <transition xmi:type="uml:Transition" xmi:id="_6cW2gCxOEeiJp9MjNj5vOw" name="[sendCoordinatesWithInterval = true]" source="_wwGzoCxOEeiJp9MjNj5vOw" target="_ySqLgCxOEeiJp9MjNj5vOw"/>
-            <transition xmi:type="uml:Transition" xmi:id="_PHSaoDM4EeiMfrziXIOBCQ" name="No obstacle on the right" source="_wwGzoCxOEeiJp9MjNj5vOw" target="_KnX5wDM4EeiMfrziXIOBCQ"/>
-            <subvertex xmi:type="uml:Pseudostate" xmi:id="_wwGzoCxOEeiJp9MjNj5vOw" name=""/>
-            <subvertex xmi:type="uml:State" xmi:id="_ySqLgCxOEeiJp9MjNj5vOw" name="SendCoordinates">
-              <entry xmi:type="uml:Activity" xmi:id="_VTeC4CxPEeiJp9MjNj5vOw" name="report" specification="_i5LBoCROEeirnb106mTxLg"/>
-              <region xmi:type="uml:Region" xmi:id="_XttbQixQEeiJp9MjNj5vOw" name="Region1">
-                <transition xmi:type="uml:Transition" xmi:id="_blUmACxQEeiJp9MjNj5vOw" source="_XtvQcCxQEeiJp9MjNj5vOw" target="_YrHesCxQEeiJp9MjNj5vOw"/>
-                <transition xmi:type="uml:Transition" xmi:id="__NEhkCxQEeiJp9MjNj5vOw" source="_XtvQcCxQEeiJp9MjNj5vOw" target="_8boUsCxQEeiJp9MjNj5vOw"/>
-                <subvertex xmi:type="uml:Pseudostate" xmi:id="_XtvQcCxQEeiJp9MjNj5vOw" name=""/>
-                <subvertex xmi:type="uml:State" xmi:id="_YrHesCxQEeiJp9MjNj5vOw" name="getImage">
-                  <entry xmi:type="uml:Activity" xmi:id="_l9xnkCxQEeiJp9MjNj5vOw" name="getCompatibleImage"/>
-                  <exit xmi:type="uml:Activity" xmi:id="_q87CICxQEeiJp9MjNj5vOw" name="return image"/>
-                </subvertex>
-                <subvertex xmi:type="uml:State" xmi:id="_8boUsCxQEeiJp9MjNj5vOw" name="getCurrentCoordinates">
-                  <entry xmi:type="uml:Activity" xmi:id="_BCsmcCxREeiJp9MjNj5vOw" name="getCoords"/>
-                  <exit xmi:type="uml:Activity" xmi:id="_GK7EgCxREeiJp9MjNj5vOw" name="return returnVec"/>
-                </subvertex>
-              </region>
-            </subvertex>
-            <subvertex xmi:type="uml:State" xmi:id="_KnX5wDM4EeiMfrziXIOBCQ" name="TurnRight">
-              <entry xmi:type="uml:Activity" xmi:id="_fOOB8DM4EeiMfrziXIOBCQ" name="turnRight"/>
+        <transition xmi:type="uml:Transition" xmi:id="_9UBB4DQqEeijfafWEg1STQ" name="every 6 virtual seconds" source="_ZlB14DQqEeijfafWEg1STQ" target="_ZlB14DQqEeijfafWEg1STQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_gKJTQDQrEeijfafWEg1STQ" source="_ed8FkDQqEeijfafWEg1STQ" target="_ZlB14DQqEeijfafWEg1STQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_CYUlEDQyEeijfafWEg1STQ" name="stop button pressed" source="_ZlB14DQqEeijfafWEg1STQ" target="_-pAasDQxEeijfafWEg1STQ"/>
+        <subvertex xmi:type="uml:State" xmi:id="_7lnVcDQhEeijfafWEg1STQ" name="State1"/>
+        <subvertex xmi:type="uml:State" xmi:id="_ZlB14DQqEeijfafWEg1STQ" name="Report">
+          <region xmi:type="uml:Region" xmi:id="_il1IAjQqEeijfafWEg1STQ" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_xPRoMDQrEeijfafWEg1STQ" name="[sendCoordinatesWithInterval == true]" source="_il29MTQqEeijfafWEg1STQ" target="_2PXTYDQqEeijfafWEg1STQ"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_il29MTQqEeijfafWEg1STQ"/>
+            <subvertex xmi:type="uml:State" xmi:id="_2PXTYDQqEeijfafWEg1STQ" name="Send Information">
+              <entry xmi:type="uml:Activity" xmi:id="_VexgQDQsEeijfafWEg1STQ" name="sendCoordinates"/>
             </subvertex>
           </region>
         </subvertex>
-        <subvertex xmi:type="uml:Pseudostate" xmi:id="_2mLm4DM4EeiMfrziXIOBCQ" name=""/>
-        <subvertex xmi:type="uml:FinalState" xmi:id="_kzldEDM6EeiMfrziXIOBCQ" name=""/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_ed8FkDQqEeijfafWEg1STQ" name=""/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_-pAasDQxEeijfafWEg1STQ" name=""/>
+      </region>
+      <region xmi:type="uml:Region" xmi:id="_gBZS0DQeEeigh_GIhwZp0g" name="Region2">
+        <transition xmi:type="uml:Transition" xmi:id="_6X_RcDQxEeijfafWEg1STQ" name="stop button pressed" source="_e8lDADQiEeijfafWEg1STQ" target="_3ZuJgDQxEeijfafWEg1STQ"/>
+        <subvertex xmi:type="uml:State" xmi:id="_e8lDADQiEeijfafWEg1STQ" name="Movement">
+          <region xmi:type="uml:Region" xmi:id="_u6eqIDQiEeijfafWEg1STQ" name="Region2">
+            <transition xmi:type="uml:Transition" xmi:id="_wg3ycDQdEeigh_GIhwZp0g" source="_ccW7QDQdEeigh_GIhwZp0g" target="_3Ft08DQcEeigh_GIhwZp0g"/>
+            <transition xmi:type="uml:Transition" xmi:id="_uusDIDQdEeigh_GIhwZp0g" name="new task &quot;turn right&quot;" source="_3Ft08DQcEeigh_GIhwZp0g" target="_ccW7QDQdEeigh_GIhwZp0g"/>
+            <transition xmi:type="uml:Transition" xmi:id="_E_icwDQjEeijfafWEg1STQ" source="_CWjBQDQjEeijfafWEg1STQ" target="_3Ft08DQcEeigh_GIhwZp0g"/>
+            <transition xmi:type="uml:Transition" xmi:id="_Gx3gkDQkEeijfafWEg1STQ" name="new task &quot;go home&quot;" source="_3Ft08DQcEeigh_GIhwZp0g" target="_A-QjMDQkEeijfafWEg1STQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_MnG1oDQkEeijfafWEg1STQ" source="_A-QjMDQkEeijfafWEg1STQ" target="_LAfdIDQkEeijfafWEg1STQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_lCizUDQwEeijfafWEg1STQ" name="new task &quot;turn left&quot;" source="_3Ft08DQcEeigh_GIhwZp0g" target="_S-AxgDQdEeigh_GIhwZp0g"/>
+            <transition xmi:type="uml:Transition" xmi:id="_l5C9gDQwEeijfafWEg1STQ" source="_S-AxgDQdEeigh_GIhwZp0g" target="_3Ft08DQcEeigh_GIhwZp0g"/>
+            <transition xmi:type="uml:Transition" xmi:id="_0RH2UDQwEeijfafWEg1STQ" name="obstacle detected" source="_3Ft08DQcEeigh_GIhwZp0g" target="_uNguEDQwEeijfafWEg1STQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_4Z9T8DQwEeijfafWEg1STQ" name="obstacle in front and left" source="_uNguEDQwEeijfafWEg1STQ" target="_ccW7QDQdEeigh_GIhwZp0g"/>
+            <transition xmi:type="uml:Transition" xmi:id="_6Sp68DQwEeijfafWEg1STQ" name="obstacle in front and right" source="_uNguEDQwEeijfafWEg1STQ" target="_S-AxgDQdEeigh_GIhwZp0g"/>
+            <subvertex xmi:type="uml:State" xmi:id="_S-AxgDQdEeigh_GIhwZp0g" name="Turn Left">
+              <doActivity xmi:type="uml:Activity" xmi:id="_Y6UX4DQdEeigh_GIhwZp0g" name="turnLeft"/>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_3Ft08DQcEeigh_GIhwZp0g" name="MoveForward">
+              <entry xmi:type="uml:Activity" xmi:id="_BcpMgDQdEeigh_GIhwZp0g" name="setTranslationalVelocity"/>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_ccW7QDQdEeigh_GIhwZp0g" name="Turn Right">
+              <doActivity xmi:type="uml:Activity" xmi:id="_kAn98DQdEeigh_GIhwZp0g" name="turnRight"/>
+            </subvertex>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_CWjBQDQjEeijfafWEg1STQ" name=""/>
+            <subvertex xmi:type="uml:State" xmi:id="_A-QjMDQkEeijfafWEg1STQ" name="Go Home"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_LAfdIDQkEeijfafWEg1STQ" name="FinalState1"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_uNguEDQwEeijfafWEg1STQ" name="" kind="choice"/>
+          </region>
+        </subvertex>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_3ZuJgDQxEeijfafWEg1STQ" name=""/>
       </region>
     </packagedElement>
     <packagedElement xmi:type="uml:StateMachine" xmi:id="_LVICgDM2EeiMfrziXIOBCQ" name="Central Station">
       <region xmi:type="uml:Region" xmi:id="_M4U6oDM2EeiMfrziXIOBCQ" name="Region1">
-        <transition xmi:type="uml:Transition" xmi:id="_wbWNkDM-EeiMfrziXIOBCQ" name="Started" source="_gDOIkDM-EeiMfrziXIOBCQ" target="_uyjq0DM-EeiMfrziXIOBCQ"/>
-        <transition xmi:type="uml:Transition" xmi:id="_uWqjkDM_EeiMfrziXIOBCQ" name="Report received" source="_gDOIkDM-EeiMfrziXIOBCQ" target="_tbKkoDM_EeiMfrziXIOBCQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_7uRnkDQ0EeijfafWEg1STQ" source="_gDOIkDM-EeiMfrziXIOBCQ" target="_fCiGwDQyEeijfafWEg1STQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_bMor4DQ1EeijfafWEg1STQ" source="_fCiGwDQyEeijfafWEg1STQ" target="_fCiGwDQyEeijfafWEg1STQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_jwQ50DQ1EeijfafWEg1STQ" source="_fCiGwDQyEeijfafWEg1STQ" target="_h0DEwDQ1EeijfafWEg1STQ"/>
         <subvertex xmi:type="uml:Pseudostate" xmi:id="_gDOIkDM-EeiMfrziXIOBCQ"/>
-        <subvertex xmi:type="uml:State" xmi:id="_uyjq0DM-EeiMfrziXIOBCQ" name="Start">
-          <entry xmi:type="uml:Activity" xmi:id="_019-wDM-EeiMfrziXIOBCQ" name="pushTask"/>
-        </subvertex>
-        <subvertex xmi:type="uml:State" xmi:id="_tbKkoDM_EeiMfrziXIOBCQ" name="Report">
-          <region xmi:type="uml:Region" xmi:id="_yBDKoTM_EeiMfrziXIOBCQ" name="Region1">
-            <transition xmi:type="uml:Transition" xmi:id="_0lv8ADM_EeiMfrziXIOBCQ" source="_z15zcDM_EeiMfrziXIOBCQ" target="_yBE_0DM_EeiMfrziXIOBCQ"/>
-            <transition xmi:type="uml:Transition" xmi:id="_73x_MDM_EeiMfrziXIOBCQ" name="Robot encounters obstacle" source="_yBE_0DM_EeiMfrziXIOBCQ" target="_7Jv0gDM_EeiMfrziXIOBCQ"/>
-            <transition xmi:type="uml:Transition" xmi:id="_ROalkDNAEeiMfrziXIOBCQ" name="coordinatestatus is not covered" source="_z15zcDM_EeiMfrziXIOBCQ" target="_O_wVoDNAEeiMfrziXIOBCQ"/>
-            <transition xmi:type="uml:Transition" xmi:id="_wlmq4DNAEeiMfrziXIOBCQ" name="[coveredPercentage > 70.0]" source="_z15zcDM_EeiMfrziXIOBCQ" target="_qf4p0DNAEeiMfrziXIOBCQ"/>
-            <subvertex xmi:type="uml:State" xmi:id="_yBE_0DM_EeiMfrziXIOBCQ" name="giveDirection"/>
-            <subvertex xmi:type="uml:Pseudostate" xmi:id="_z15zcDM_EeiMfrziXIOBCQ" name=""/>
-            <subvertex xmi:type="uml:State" xmi:id="_7Jv0gDM_EeiMfrziXIOBCQ" name="Map gridpoint as obstacle">
-              <entry xmi:type="uml:Activity" xmi:id="_EdOLADNAEeiMfrziXIOBCQ" name="setGridPointStatus"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_AKzq0DQVEeigh_GIhwZp0g"/>
+        <subvertex xmi:type="uml:State" xmi:id="_fCiGwDQyEeijfafWEg1STQ" name="Monitor">
+          <region xmi:type="uml:Region" xmi:id="_ukYrETQyEeijfafWEg1STQ" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_m-bw4DQzEeijfafWEg1STQ" name="Receiving report from robot" source="_y8BZsDQyEeijfafWEg1STQ" target="_O92swDQzEeijfafWEg1STQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_gKCaADQ1EeijfafWEg1STQ" source="_O92swDQzEeijfafWEg1STQ" target="_eL7HgDQ1EeijfafWEg1STQ"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_y8BZsDQyEeijfafWEg1STQ" name=""/>
+            <subvertex xmi:type="uml:State" xmi:id="_O92swDQzEeijfafWEg1STQ" name="Handle Report">
+              <region xmi:type="uml:Region" xmi:id="_UL9wYjQzEeijfafWEg1STQ" name="Region1">
+                <transition xmi:type="uml:Transition" xmi:id="_fxUp8DQzEeijfafWEg1STQ" name="[coveredPercentage > 70.00]" source="_UL_lkDQzEeijfafWEg1STQ" target="_aNRLgDQzEeijfafWEg1STQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_0NJN4DQzEeijfafWEg1STQ" source="_aNRLgDQzEeijfafWEg1STQ" target="_yuDZsDQzEeijfafWEg1STQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_-UFBoDQzEeijfafWEg1STQ" source="_UL_lkDQzEeijfafWEg1STQ" target="_5n0t4DQzEeijfafWEg1STQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_OrEeMDQ0EeijfafWEg1STQ" name="robot senses obstacle" source="_5n0t4DQzEeijfafWEg1STQ" target="_OIfVkDQ0EeijfafWEg1STQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_demj8DQ0EeijfafWEg1STQ" name="coordinate has status != covered" source="_5n0t4DQzEeijfafWEg1STQ" target="_cqoJUDQ0EeijfafWEg1STQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_HlEPYDQ1EeijfafWEg1STQ" source="_OIfVkDQ0EeijfafWEg1STQ" target="_Cf2pEDQ1EeijfafWEg1STQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_IP5VEDQ1EeijfafWEg1STQ" source="_5n0t4DQzEeijfafWEg1STQ" target="_AI3jkDQ1EeijfafWEg1STQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_ItKf4DQ1EeijfafWEg1STQ" source="_cqoJUDQ0EeijfafWEg1STQ" target="_CNEP8DQ1EeijfafWEg1STQ"/>
+                <subvertex xmi:type="uml:Pseudostate" xmi:id="_UL_lkDQzEeijfafWEg1STQ"/>
+                <subvertex xmi:type="uml:State" xmi:id="_aNRLgDQzEeijfafWEg1STQ" name="Send Robots Home">
+                  <doActivity xmi:type="uml:Activity" xmi:id="_dT_E0DQzEeijfafWEg1STQ" name="pushTask"/>
+                </subvertex>
+                <subvertex xmi:type="uml:FinalState" xmi:id="_yuDZsDQzEeijfafWEg1STQ" name=""/>
+                <subvertex xmi:type="uml:State" xmi:id="_5n0t4DQzEeijfafWEg1STQ" name="Give Robot Direction to Move">
+                  <doActivity xmi:type="uml:Activity" xmi:id="_ACH30DQ0EeijfafWEg1STQ" name="pushTask"/>
+                </subvertex>
+                <subvertex xmi:type="uml:State" xmi:id="_OIfVkDQ0EeijfafWEg1STQ" name="Map gridpoint as obstacle">
+                  <doActivity xmi:type="uml:Activity" xmi:id="_Z4c8oDQ0EeijfafWEg1STQ" name="setGridPointStatus"/>
+                </subvertex>
+                <subvertex xmi:type="uml:State" xmi:id="_cqoJUDQ0EeijfafWEg1STQ" name="Set gridPointStatus to covered">
+                  <doActivity xmi:type="uml:Activity" xmi:id="_s9XYADQ0EeijfafWEg1STQ" name="saveImage"/>
+                  <entry xmi:type="uml:Activity" xmi:id="_rhG1YDQ0EeijfafWEg1STQ" name="setGridPointStatus"/>
+                </subvertex>
+                <subvertex xmi:type="uml:FinalState" xmi:id="_AI3jkDQ1EeijfafWEg1STQ"/>
+                <subvertex xmi:type="uml:FinalState" xmi:id="_CNEP8DQ1EeijfafWEg1STQ"/>
+                <subvertex xmi:type="uml:FinalState" xmi:id="_Cf2pEDQ1EeijfafWEg1STQ"/>
+              </region>
             </subvertex>
-            <subvertex xmi:type="uml:State" xmi:id="_O_wVoDNAEeiMfrziXIOBCQ" name="Set Coordinate to Covered">
-              <doActivity xmi:type="uml:Activity" xmi:id="_exUJ4DNAEeiMfrziXIOBCQ" name="SaveImage"/>
-              <entry xmi:type="uml:Activity" xmi:id="_aZvssDNAEeiMfrziXIOBCQ" name="setGridPointStatus"/>
-            </subvertex>
-            <subvertex xmi:type="uml:State" xmi:id="_qf4p0DNAEeiMfrziXIOBCQ" name="goHome"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_eL7HgDQ1EeijfafWEg1STQ"/>
           </region>
         </subvertex>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_h0DEwDQ1EeijfafWEg1STQ" name="stop button pressed"/>
       </region>
     </packagedElement>
     <packagedElement xmi:type="uml:StateMachine" xmi:id="_RAtsUDM2EeiMfrziXIOBCQ" name="Map">
@@ -620,13 +618,13 @@
         <transition xmi:type="uml:Transition" xmi:id="__IY7sDM8EeiMfrziXIOBCQ" source="_cD6FQDM8EeiMfrziXIOBCQ" target="_78fAYDM8EeiMfrziXIOBCQ"/>
         <subvertex xmi:type="uml:Pseudostate" xmi:id="_VYEfYDM8EeiMfrziXIOBCQ" name=""/>
         <subvertex xmi:type="uml:State" xmi:id="_cD6FQDM8EeiMfrziXIOBCQ" name="Send Coordinates">
-          <entry xmi:type="uml:Activity" xmi:id="_iPPmIDM8EeiMfrziXIOBCQ" name="getCoordinates"/>
+          <doActivity xmi:type="uml:Activity" xmi:id="_2XlLUDQWEeigh_GIhwZp0g" name="getCoordinates"/>
         </subvertex>
         <subvertex xmi:type="uml:State" xmi:id="_sC0ZADM8EeiMfrziXIOBCQ" name="Send status">
-          <entry xmi:type="uml:Activity" xmi:id="_vLHmsDM8EeiMfrziXIOBCQ" name="getStatus"/>
+          <doActivity xmi:type="uml:Activity" xmi:id="_4k7zsDQWEeigh_GIhwZp0g" name="getStatus"/>
         </subvertex>
         <subvertex xmi:type="uml:State" xmi:id="_1_Gb8DM8EeiMfrziXIOBCQ" name="Set Status">
-          <entry xmi:type="uml:Activity" xmi:id="_4ivdYDM8EeiMfrziXIOBCQ" name="setStatus"/>
+          <doActivity xmi:type="uml:Activity" xmi:id="_6m2BEDQWEeigh_GIhwZp0g" name="setStatus"/>
         </subvertex>
         <subvertex xmi:type="uml:FinalState" xmi:id="_7NsnwDM8EeiMfrziXIOBCQ"/>
         <subvertex xmi:type="uml:FinalState" xmi:id="_7mpTQDM8EeiMfrziXIOBCQ"/>
@@ -634,10 +632,26 @@
       </region>
     </packagedElement>
     <packagedElement xmi:type="uml:StateMachine" xmi:id="_WX5MYDM2EeiMfrziXIOBCQ" name="Configuration">
+      <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_aCZsMDQbEeigh_GIhwZp0g" kind="terminate"/>
       <region xmi:type="uml:Region" xmi:id="_XklB8DM2EeiMfrziXIOBCQ" name="Region1">
-        <transition xmi:type="uml:Transition" xmi:id="_JmuGUDM-EeiMfrziXIOBCQ" name="start button pressed" source="_IRQIMDM-EeiMfrziXIOBCQ" target="_IxypcDM-EeiMfrziXIOBCQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_ZkPbcDQZEeigh_GIhwZp0g" name="start button pressed" source="_ONdwcDQZEeigh_GIhwZp0g" target="_IxypcDM-EeiMfrziXIOBCQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_g5nGgDQZEeigh_GIhwZp0g" name="stop button pressed" source="_IxypcDM-EeiMfrziXIOBCQ" target="_QBJ7oDQZEeigh_GIhwZp0g"/>
+        <transition xmi:type="uml:Transition" xmi:id="_3dNPQDQZEeigh_GIhwZp0g" source="_IRQIMDM-EeiMfrziXIOBCQ" target="_ONdwcDQZEeigh_GIhwZp0g"/>
+        <transition xmi:type="uml:Transition" xmi:id="_AUXyUDQcEeigh_GIhwZp0g" source="_QBJ7oDQZEeigh_GIhwZp0g" target="_aCZsMDQbEeigh_GIhwZp0g"/>
         <subvertex xmi:type="uml:Pseudostate" xmi:id="_IRQIMDM-EeiMfrziXIOBCQ" name=""/>
-        <subvertex xmi:type="uml:State" xmi:id="_IxypcDM-EeiMfrziXIOBCQ" name="Create environment"/>
+        <subvertex xmi:type="uml:State" xmi:id="_IxypcDM-EeiMfrziXIOBCQ" name="Create environment">
+          <doActivity xmi:type="uml:Activity" xmi:id="_MG7P0DQbEeigh_GIhwZp0g" name="run environment"/>
+          <entry xmi:type="uml:Activity" xmi:id="_BxUG4DQbEeigh_GIhwZp0g" name="create Simbad environment"/>
+          <exit xmi:type="uml:Activity" xmi:id="_Ru-dcDQbEeigh_GIhwZp0g" name="close environment, disable stop button"/>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_ONdwcDQZEeigh_GIhwZp0g" name="Configuring">
+          <doActivity xmi:type="uml:Activity" xmi:id="_SGeM4DQaEeigh_GIhwZp0g" name="select variables" node="_ydxrYDQaEeigh_GIhwZp0g">
+            <node xmi:type="uml:CallBehaviorAction" xmi:id="_ydxrYDQaEeigh_GIhwZp0g" name="CallBehaviorAction1" behavior="_wq9p8DQaEeigh_GIhwZp0g"/>
+          </doActivity>
+          <entry xmi:type="uml:Activity" xmi:id="_wq9p8DQaEeigh_GIhwZp0g" name="open configuration prompt"/>
+          <exit xmi:type="uml:Activity" xmi:id="_bY2XMDQaEeigh_GIhwZp0g" name="disable configuration and start buttons"/>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_QBJ7oDQZEeigh_GIhwZp0g" name="Stopped"/>
       </region>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_B_TzcCOwEeijKP9zZ3gtUQ">
