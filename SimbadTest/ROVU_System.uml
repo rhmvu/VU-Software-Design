@@ -101,25 +101,48 @@ by robot for the first time.&#xD;
         <body>true</body>
       </specification>
     </ownedRule>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_VD2YcDQkEeirYo_nbsYNJw" name="Central Station" coveredBy="_XN1fkDQrEeirYo_nbsYNJw _fWdsMDQuEeirYo_nbsYNJw _kio2IDQuEeirYo_nbsYNJw _fXME8TQuEeirYo_nbsYNJw"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_e7sAQDQkEeirYo_nbsYNJw" name="Robot" coveredBy="_XN04gDQrEeirYo_nbsYNJw"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_gEW4gDQkEeirYo_nbsYNJw" name="Map" coveredBy="_fWdsMTQuEeirYo_nbsYNJw _kio2ITQuEeirYo_nbsYNJw _fXME8DQuEeirYo_nbsYNJw"/>
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_3R58MDQvEeirYo_nbsYNJw" name="Constraint">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_3R7xYDQvEeirYo_nbsYNJw" name="constraintSpec">
+        <language>Natural language</language>
+        <body>If obstacle is nearby</body>
+      </specification>
+    </ownedRule>
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_krUwsDQxEeirYo_nbsYNJw" name="Constraint">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_krVXwDQxEeirYo_nbsYNJw" name="Covered percentage">
+        <language>Java</language>
+        <body>CoveredPercentage > 70</body>
+      </specification>
+    </ownedRule>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_VD2YcDQkEeirYo_nbsYNJw" name="Central Station" coveredBy="_PYhsADQyEeirYo_nbsYNJw _XN1fkDQrEeirYo_nbsYNJw _fWdsMDQuEeirYo_nbsYNJw _kio2IDQuEeirYo_nbsYNJw _fXME8TQuEeirYo_nbsYNJw _WOSxUDQvEeirYo_nbsYNJw _WOSKQDQvEeirYo_nbsYNJw _hOVP8DQyEeirYo_nbsYNJw"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_e7sAQDQkEeirYo_nbsYNJw" name="Robot" coveredBy="_PYhsADQyEeirYo_nbsYNJw _XN04gDQrEeirYo_nbsYNJw _hOVP8TQyEeirYo_nbsYNJw"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_gEW4gDQkEeirYo_nbsYNJw" name="Map" coveredBy="_PYhsADQyEeirYo_nbsYNJw _fWdsMTQuEeirYo_nbsYNJw _kio2ITQuEeirYo_nbsYNJw _fXME8DQuEeirYo_nbsYNJw"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_XN04gDQrEeirYo_nbsYNJw" name="Message1SendEvent" covered="_e7sAQDQkEeirYo_nbsYNJw" message="_XNzDUDQrEeirYo_nbsYNJw"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_XN1fkDQrEeirYo_nbsYNJw" name="Message1ReceiveEvent" covered="_VD2YcDQkEeirYo_nbsYNJw" message="_XNzDUDQrEeirYo_nbsYNJw"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fWdsMDQuEeirYo_nbsYNJw" covered="_VD2YcDQkEeirYo_nbsYNJw"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fWdsMTQuEeirYo_nbsYNJw" covered="_gEW4gDQkEeirYo_nbsYNJw"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_kio2IDQuEeirYo_nbsYNJw" name="Message1SendEvent" covered="_VD2YcDQkEeirYo_nbsYNJw" message="_kioPEDQuEeirYo_nbsYNJw"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_WOSKQDQvEeirYo_nbsYNJw" name="process sensorValues" covered="_VD2YcDQkEeirYo_nbsYNJw" finish="_WOSxUDQvEeirYo_nbsYNJw" start="_kio2IDQuEeirYo_nbsYNJw"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_kio2ITQuEeirYo_nbsYNJw" name="Message1ReceiveEvent" covered="_gEW4gDQkEeirYo_nbsYNJw" message="_kioPEDQuEeirYo_nbsYNJw"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fXME8DQuEeirYo_nbsYNJw" covered="_gEW4gDQkEeirYo_nbsYNJw"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fXME8TQuEeirYo_nbsYNJw" covered="_VD2YcDQkEeirYo_nbsYNJw"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_WOSxUDQvEeirYo_nbsYNJw" name="BehaviorExecutionSpecification1Finish" covered="_VD2YcDQkEeirYo_nbsYNJw" execution="_WOSKQDQvEeirYo_nbsYNJw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hOVP8DQyEeirYo_nbsYNJw" name="Message1SendEvent" covered="_VD2YcDQkEeirYo_nbsYNJw" message="_hOUo4DQyEeirYo_nbsYNJw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hOVP8TQyEeirYo_nbsYNJw" name="Message1ReceiveEvent" covered="_e7sAQDQkEeirYo_nbsYNJw" message="_hOUo4DQyEeirYo_nbsYNJw"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_boshUDQrEeirYo_nbsYNJw" name="Message2SendEvent" message="_bor6QDQrEeirYo_nbsYNJw"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_boshUTQrEeirYo_nbsYNJw" name="Message2ReceiveEvent" message="_bor6QDQrEeirYo_nbsYNJw"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_boDoIDQrEeirYo_nbsYNJw" name="Message1SendEvent" message="_boDBEDQrEeirYo_nbsYNJw"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_boDoITQrEeirYo_nbsYNJw" name="Message1ReceiveEvent" message="_boDBEDQrEeirYo_nbsYNJw"/>
+    <fragment xmi:type="uml:CombinedFragment" xmi:id="_PYgd4DQyEeirYo_nbsYNJw" name="CombinedFragment1">
+      <operand xmi:type="uml:InteractionOperand" xmi:id="_PYhsADQyEeirYo_nbsYNJw" name="InteractionOperand1" covered="_e7sAQDQkEeirYo_nbsYNJw _VD2YcDQkEeirYo_nbsYNJw _gEW4gDQkEeirYo_nbsYNJw">
+        <guard xmi:type="uml:InteractionConstraint" xmi:id="_PYhsATQyEeirYo_nbsYNJw" name="guard"/>
+      </operand>
+    </fragment>
     <message xmi:type="uml:Message" xmi:id="_til_QDQkEeirYo_nbsYNJw"/>
     <message xmi:type="uml:Message" xmi:id="_XNzDUDQrEeirYo_nbsYNJw" name="reportCoordinate" messageSort="asynchCall" receiveEvent="_XN1fkDQrEeirYo_nbsYNJw" sendEvent="_XN04gDQrEeirYo_nbsYNJw"/>
     <message xmi:type="uml:Message" xmi:id="_boDBEDQrEeirYo_nbsYNJw" name="requestCoordinateStatus" receiveEvent="_boDoITQrEeirYo_nbsYNJw" sendEvent="_boDoIDQrEeirYo_nbsYNJw"/>
     <message xmi:type="uml:Message" xmi:id="_bor6QDQrEeirYo_nbsYNJw" name="CoordinateStatus" receiveEvent="_boshUTQrEeirYo_nbsYNJw" sendEvent="_boshUDQrEeirYo_nbsYNJw"/>
     <message xmi:type="uml:Message" xmi:id="_kioPEDQuEeirYo_nbsYNJw" name="setGridpointStatus" messageSort="asynchCall" receiveEvent="_kio2ITQuEeirYo_nbsYNJw" sendEvent="_kio2IDQuEeirYo_nbsYNJw"/>
+    <message xmi:type="uml:Message" xmi:id="_xGcDADQwEeirYo_nbsYNJw" name="Task: Direction" messageSort="asynchCall"/>
+    <message xmi:type="uml:Message" xmi:id="_hOUo4DQyEeirYo_nbsYNJw" name="Task: goHome" messageSort="asynchCall" receiveEvent="_hOVP8TQyEeirYo_nbsYNJw" sendEvent="_hOVP8DQyEeirYo_nbsYNJw"/>
   </packagedElement>
 </uml:Model>
