@@ -145,4 +145,5 @@ by robot for the first time.&#xD;
     <message xmi:type="uml:Message" xmi:id="_xGcDADQwEeirYo_nbsYNJw" name="Task: Direction" messageSort="asynchCall"/>
     <message xmi:type="uml:Message" xmi:id="_hOUo4DQyEeirYo_nbsYNJw" name="Task: goHome" messageSort="asynchCall" receiveEvent="_hOVP8TQyEeirYo_nbsYNJw" sendEvent="_hOVP8DQyEeirYo_nbsYNJw"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_KX8RkDQzEeirYo_nbsYNJw" name="Mission Startup"/>
 </uml:Model>
