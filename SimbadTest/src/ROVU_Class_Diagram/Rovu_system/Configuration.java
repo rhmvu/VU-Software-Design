@@ -53,7 +53,6 @@ public class Configuration{
 	private JButton stop;
 	private File directory;
 	
-	private int nOfArches;
 	private int nOfBoxes;
 	private int nOfRobots;
 	
