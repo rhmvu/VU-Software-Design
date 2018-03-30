@@ -256,17 +256,4 @@
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KI_2cDQOEeiRS_tKdZLHAQ" id="(0.6666666666666666,1.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KI_2cTQOEeiRS_tKdZLHAQ" id="(0.8571428571428571,0.8333333333333334)"/>
   </edges>
-  <edges xmi:type="notation:Connector" xmi:id="_LSueoDQOEeiRS_tKdZLHAQ" type="Include_Edge" source="_vr7hwDQNEeiRS_tKdZLHAQ" target="_znrCIBcPEei7ipzadJJ7oA">
-    <children xmi:type="notation:DecorationNode" xmi:id="_LSvFsDQOEeiRS_tKdZLHAQ" type="Include_KeywordLabel">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_LSvFsTQOEeiRS_tKdZLHAQ" y="20"/>
-    </children>
-    <children xmi:type="notation:DecorationNode" xmi:id="_LSvFsjQOEeiRS_tKdZLHAQ" type="Include_StereotypeLabel">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_LSvFszQOEeiRS_tKdZLHAQ" y="-20"/>
-    </children>
-    <styles xmi:type="notation:FontStyle" xmi:id="_LSueoTQOEeiRS_tKdZLHAQ"/>
-    <element xmi:type="uml:Include" href="ROVU_System.uml#_LP7pUDQOEeiRS_tKdZLHAQ"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LSueojQOEeiRS_tKdZLHAQ" points="[240, 139, -643984, -643984]$[364, 200, -643984, -643984]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LYo5YDQOEeiRS_tKdZLHAQ" id="(0.5714285714285714,0.9833333333333333)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LYo5YTQOEeiRS_tKdZLHAQ" id="(0.028368794326241134,0.32786885245901637)"/>
-  </edges>
 </notation:Diagram>
