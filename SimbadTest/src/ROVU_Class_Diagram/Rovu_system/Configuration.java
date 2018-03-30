@@ -45,10 +45,8 @@ public class Configuration{
 	
 	private JFrame frame;
 	private JPanel panel;
-	private JLabel arches;
 	private JLabel boxes;
 	private JLabel robots;
-	private JComboBox<String> acb;
 	private JComboBox<String> bcb;
 	private JComboBox<String> rcb;
 	private JButton start;
