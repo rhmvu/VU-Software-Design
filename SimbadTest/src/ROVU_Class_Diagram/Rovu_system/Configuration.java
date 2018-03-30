@@ -28,7 +28,7 @@ import simbad.sim.EnvironmentDescription;
 import simbad.sim.Wall;
 
 import javax.swing.*;
-
+import javax.swing.border.EmptyBorder;
 
 import ROVU_Class_Diagram.Rovu_system.CentralStation;
 import ROVU_Class_Diagram.Rovu_system.ObstacleFactory;
@@ -42,7 +42,7 @@ import nl.vu.cs.s2.simbadtest.ExampleRobot;
 public class Configuration{
 	
 	public Environment environment;
-	
+
 	private JFrame frame;
 	private JPanel panel;
 	private JLabel boxes;
@@ -58,7 +58,42 @@ public class Configuration{
 	
 	
 	public void init() {
-		directory = new File("images");
+		frame = new JFrame("ROVU System");
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(500, 500);
+		frame.setLocation(800,300);
+
+		GridLayout layout = new GridLayout(3, 2); 
+		layout.setVgap(20);
+		layout.setHgap(80);
+		panel = new JPanel(layout);
+		panel.setBorder(new EmptyBorder(10, 10, 10, 10));
+
+		JLabel boxesLabel = new JLabel("Number of boxes");
+		JLabel robotsLabel = new JLabel("Number of robots");
+
+		boxes = new JComboBox<>(new Integer[] {0, 1, 2, 3, 4});
+		robots = new JComboBox<>(new Integer[] {1, 2, 3, 4});
+		JButton start = new JButton("Start");
+		JButton stop = new JButton("Stop");
+		start.addActionListener(this);
+		stop.addActionListener(this);
+
+		panel.add(boxesLabel);
+		panel.add(boxes);
+		panel.add(robotsLabel);
+		panel.add(robots);
+		panel.add(start);
+		panel.add(stop);
+
+		frame.add(panel);
+		frame.pack();
+		frame.setVisible(true);
+	}
+	
+	private void createDirectory() {
+		File directory = new File("images");
 		if(!directory.exists()) {
 			System.out.println("creating directory: " + directory.getName());
 			boolean result = false;

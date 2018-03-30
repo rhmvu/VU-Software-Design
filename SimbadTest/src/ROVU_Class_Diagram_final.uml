@@ -68,11 +68,16 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_i5kDMCROEeirnb106mTxLg" name="Configuration" visibility="public">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_i572oCROEeirnb106mTxLg" name="frame" visibility="private" type="_X5xfoSOwEeijKP9zZ3gtUQ" isUnique="false"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_i58dsCROEeirnb106mTxLg" name="panel" visibility="private" type="_X52YICOwEeijKP9zZ3gtUQ" isUnique="false"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_i5-S4CROEeirnb106mTxLg" name="arches" visibility="private" type="_X57QoCOwEeijKP9zZ3gtUQ" isUnique="false"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_i5-58CROEeirnb106mTxLg" name="boxes" visibility="private" type="_X57QoCOwEeijKP9zZ3gtUQ" isUnique="false"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_i6AIECROEeirnb106mTxLg" name="robots" visibility="private" type="_X57QoCOwEeijKP9zZ3gtUQ" isUnique="false"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_i6AvICROEeirnb106mTxLg" name="acb" visibility="private" type="_X6BXQCOwEeijKP9zZ3gtUQ" isUnique="false"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_i6GOsCROEeirnb106mTxLg" name="bcb" visibility="private" type="_X6BXQCOwEeijKP9zZ3gtUQ" isUnique="false"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_i6ID4CROEeirnb106mTxLg" name="rcb" visibility="private" type="_X6BXQCOwEeijKP9zZ3gtUQ" isUnique="false"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_i6J5ECROEeirnb106mTxLg" name="start" visibility="private" type="_X6IE8COwEeijKP9zZ3gtUQ" isUnique="false"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_i6KgICROEeirnb106mTxLg" name="nOfArches" visibility="private" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+        </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_i6OxkCROEeirnb106mTxLg" name="nOfBoxes" visibility="private" isUnique="false">
           <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
         </ownedAttribute>
@@ -87,7 +92,6 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QfswIiRzEeihi78DqqpnUw"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QftXMCRzEeihi78DqqpnUw" value="1"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_eMNJQDQSEeiUH8FJKQ-Jmw" name="stop" visibility="private" type="_X6IE8COwEeijKP9zZ3gtUQ" isUnique="false"/>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_i52XECROEeirnb106mTxLg" name="Configuration implements ActionListener" client="_i5kDMCROEeirnb106mTxLg" supplier="_X5rZASOwEeijKP9zZ3gtUQ" contract="_X5rZASOwEeijKP9zZ3gtUQ"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_i6Sb8CROEeirnb106mTxLg" name="init" visibility="public"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_i6a-0CROEeirnb106mTxLg" name="actionPerformed" visibility="public">
@@ -118,6 +122,14 @@
             <body>new Vector3f(2, 1, 3)</body>
           </defaultValue>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_i7FGICROEeirnb106mTxLg" name="ARCH_COORDINATES" visibility="private" isLeaf="true" type="_X8KFQCOwEeijKP9zZ3gtUQ" isUnique="false">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_i7FtMCROEeirnb106mTxLg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_i7JXkCROEeirnb106mTxLg" value="*"/>
+          <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_i7J-oCROEeirnb106mTxLg" name="defaultValue">
+            <language>JAVA</language>
+            <body>{ new Vector3d(-7.6, 0, 0), new Vector3d(-7.6, 0, 1), new Vector3d(7.6, 0, 0), new Vector3d(7.6, 0, 1) }</body>
+          </defaultValue>
+        </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_i7Lz0CROEeirnb106mTxLg" name="STARTING_ROTATION" visibility="private" isLeaf="true" isUnique="false">
           <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
           <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_i7NB8CROEeirnb106mTxLg" name="defaultValue">
@@ -138,6 +150,9 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_G7hrMCRzEeihi78DqqpnUw" value="4"/>
         </ownedAttribute>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_i7TIkCROEeirnb106mTxLg" name="Environment" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_i8LSUCROEeirnb106mTxLg" name="arches">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_i8L5YCROEeirnb106mTxLg" name="boxes">
             <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
           </ownedParameter>
@@ -218,6 +233,11 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_jKlhwCROEeirnb106mTxLg" name="vec" type="_X8KFQCOwEeijKP9zZ3gtUQ"/>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_jKmv4CROEeirnb106mTxLg" name="vec2" type="_X8WSgCOwEeijKP9zZ3gtUQ"/>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_jKpMICROEeirnb106mTxLg" name="env" type="_i6q2cCROEeirnb106mTxLg"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_jKzkMCROEeirnb106mTxLg" name="getArch" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_jK1ZYCROEeirnb106mTxLg" type="_YKVrMCOwEeijKP9zZ3gtUQ" direction="return"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_jK2AcCROEeirnb106mTxLg" name="vec" type="_X8KFQCOwEeijKP9zZ3gtUQ"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_jK4csCROEeirnb106mTxLg" name="env" type="_i6q2cCROEeirnb106mTxLg"/>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_jWlWYCROEeirnb106mTxLg" name="Subject" visibility="public" isAbstract="true">
@@ -335,9 +355,6 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_Xnqw0yRREeirnb106mTxLg" name="robotdirection" type="_jWZJICROEeirnb106mTxLg" association="_Xnqw0CRREeirnb106mTxLg"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_RQAYkDQSEeiUH8FJKQ-Jmw" name="running" visibility="private" isUnique="false">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
-        </ownedAttribute>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_jMTZACROEeirnb106mTxLg" name="Robot" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_jMatwCROEeirnb106mTxLg" name="position" type="_X8KFQCOwEeijKP9zZ3gtUQ"/>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_jMci8CROEeirnb106mTxLg" name="name" type="_YIreUCOwEeijKP9zZ3gtUQ"/>
@@ -373,7 +390,6 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_Yz2CgCRxEei75a1G5gx9qQ" name="getImage">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_lorm8CRxEei75a1G5gx9qQ" name="cameraImage" type="_63WPACRvEei75a1G5gx9qQ" direction="return"/>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_VcBGADQSEeiUH8FJKQ-Jmw" name="stop"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_jWZJICROEeirnb106mTxLg" name="RobotDirection" visibility="public">
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_jWcMcCROEeirnb106mTxLg" name="NORTH"/>
