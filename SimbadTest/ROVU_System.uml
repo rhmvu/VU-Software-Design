@@ -71,4 +71,20 @@ by robot for the first time.&#xD;
     <ownedEnd xmi:type="uml:Property" xmi:id="_KD4F4DQOEeiRS_tKdZLHAQ" name="stop rovu " type="_vo6qADQNEeiRS_tKdZLHAQ" association="_KDtt0DQOEeiRS_tKdZLHAQ"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_KD4s8DQOEeiRS_tKdZLHAQ" name="operator" type="_4kPp0BcPEei7ipzadJJ7oA" association="_KDtt0DQOEeiRS_tKdZLHAQ"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_93gIQDQQEeiX6Oo85e3LYw" name="Interaction1">
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_O3JgQDQREeiX6Oo85e3LYw" name=":Robot" coveredBy="_EiqGwDQTEeiX6Oo85e3LYw _tOjRoDQTEeiX6Oo85e3LYw _2yklkDQTEeiX6Oo85e3LYw"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_UFqMgDQREeiX6Oo85e3LYw" name=":CentralStation" coveredBy="_EiqGwDQTEeiX6Oo85e3LYw _tOjRoDQTEeiX6Oo85e3LYw _2yj-gDQTEeiX6Oo85e3LYw"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_W5kekDQREeiX6Oo85e3LYw" name=":Map" coveredBy="_EiqGwDQTEeiX6Oo85e3LYw"/>
+    <fragment xmi:type="uml:CombinedFragment" xmi:id="_Eio4oDQTEeiX6Oo85e3LYw" name="CombinedFragment1" interactionOperator="strict">
+      <operand xmi:type="uml:InteractionOperand" xmi:id="_EiqGwDQTEeiX6Oo85e3LYw" name="InteractionOperand1" covered="_W5kekDQREeiX6Oo85e3LYw _UFqMgDQREeiX6Oo85e3LYw _O3JgQDQREeiX6Oo85e3LYw">
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_2yj-gDQTEeiX6Oo85e3LYw" name="Message1SendEvent" covered="_UFqMgDQREeiX6Oo85e3LYw" message="_2yTf0DQTEeiX6Oo85e3LYw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_2yklkDQTEeiX6Oo85e3LYw" name="Message1ReceiveEvent" covered="_O3JgQDQREeiX6Oo85e3LYw" message="_2yTf0DQTEeiX6Oo85e3LYw"/>
+        <guard xmi:type="uml:InteractionConstraint" xmi:id="_EiqGwTQTEeiX6Oo85e3LYw" name="guard"/>
+      </operand>
+      <operand xmi:type="uml:InteractionOperand" xmi:id="_tOjRoDQTEeiX6Oo85e3LYw" name="InteractionOperand2" covered="_UFqMgDQREeiX6Oo85e3LYw _O3JgQDQREeiX6Oo85e3LYw">
+        <guard xmi:type="uml:InteractionConstraint" xmi:id="_tOkfwDQTEeiX6Oo85e3LYw" name="guard"/>
+      </operand>
+    </fragment>
+    <message xmi:type="uml:Message" xmi:id="_2yTf0DQTEeiX6Oo85e3LYw" name="Task sendCoordinatesWithInterval" messageSort="asynchCall" receiveEvent="_2yklkDQTEeiX6Oo85e3LYw" sendEvent="_2yj-gDQTEeiX6Oo85e3LYw"/>
+  </packagedElement>
 </uml:Model>
