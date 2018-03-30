@@ -30,9 +30,7 @@ by robot for the first time.&#xD;
     <packagedElement xmi:type="uml:UseCase" xmi:id="_znnXwBcPEei7ipzadJJ7oA" name="Stop mission">
       <include xmi:type="uml:Include" xmi:id="_f-jJoBcTEei7ipzadJJ7oA" addition="_o2msQBcPEei7ipzadJJ7oA"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_vo6qADQNEeiRS_tKdZLHAQ" name="Stop Rovu ">
-      <include xmi:type="uml:Include" xmi:id="_LP7pUDQOEeiRS_tKdZLHAQ" addition="_znnXwBcPEei7ipzadJJ7oA"/>
-    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_vo6qADQNEeiRS_tKdZLHAQ" name="Stop Rovu "/>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_4kPp0BcPEei7ipzadJJ7oA" name="Operator"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_54aAYBcPEei7ipzadJJ7oA" memberEnd="_54ancRcPEei7ipzadJJ7oA _54anchcPEei7ipzadJJ7oA">
