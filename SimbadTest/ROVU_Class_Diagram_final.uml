@@ -560,22 +560,23 @@
             <subvertex xmi:type="uml:State" xmi:id="_O92swDQzEeijfafWEg1STQ" name="Handle Report">
               <region xmi:type="uml:Region" xmi:id="_UL9wYjQzEeijfafWEg1STQ" name="Region1">
                 <transition xmi:type="uml:Transition" xmi:id="_0NJN4DQzEeijfafWEg1STQ" source="_aNRLgDQzEeijfafWEg1STQ" target="_yuDZsDQzEeijfafWEg1STQ"/>
-                <transition xmi:type="uml:Transition" xmi:id="_OrEeMDQ0EeijfafWEg1STQ" name="robot senses obstacle" source="_tYINsDS-EeioEPqoYCkO6Q" target="_OIfVkDQ0EeijfafWEg1STQ"/>
-                <transition xmi:type="uml:Transition" xmi:id="_demj8DQ0EeijfafWEg1STQ" name="coordinate has status != covered" source="_tYINsDS-EeioEPqoYCkO6Q" target="_cqoJUDQ0EeijfafWEg1STQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_OrEeMDQ0EeijfafWEg1STQ" name="[obstacle distance &lt; 2.0]" source="_tYINsDS-EeioEPqoYCkO6Q" target="_OIfVkDQ0EeijfafWEg1STQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_demj8DQ0EeijfafWEg1STQ" name="[coordinateStatus != covered]" source="_tYINsDS-EeioEPqoYCkO6Q" target="_cqoJUDQ0EeijfafWEg1STQ"/>
                 <transition xmi:type="uml:Transition" xmi:id="_HlEPYDQ1EeijfafWEg1STQ" source="_OIfVkDQ0EeijfafWEg1STQ" target="_Cf2pEDQ1EeijfafWEg1STQ"/>
                 <transition xmi:type="uml:Transition" xmi:id="_IP5VEDQ1EeijfafWEg1STQ" source="_tYINsDS-EeioEPqoYCkO6Q" target="_AI3jkDQ1EeijfafWEg1STQ"/>
                 <transition xmi:type="uml:Transition" xmi:id="_ItKf4DQ1EeijfafWEg1STQ" source="_cqoJUDQ0EeijfafWEg1STQ" target="_CNEP8DQ1EeijfafWEg1STQ"/>
                 <transition xmi:type="uml:Transition" xmi:id="__z3JMDS-EeioEPqoYCkO6Q" source="_UL_lkDQzEeijfafWEg1STQ" target="_tYINsDS-EeioEPqoYCkO6Q"/>
                 <transition xmi:type="uml:Transition" xmi:id="_Nua_kDS_EeioEPqoYCkO6Q" name="[coveredPercentage > 70.00]" source="_tYINsDS-EeioEPqoYCkO6Q" target="_aNRLgDQzEeijfafWEg1STQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_lZwR0DTSEeidML-dro784g" name="[obstacle distance &lt; 2.0]" source="_cqoJUDQ0EeijfafWEg1STQ" target="_OIfVkDQ0EeijfafWEg1STQ"/>
                 <subvertex xmi:type="uml:Pseudostate" xmi:id="_UL_lkDQzEeijfafWEg1STQ"/>
                 <subvertex xmi:type="uml:State" xmi:id="_aNRLgDQzEeijfafWEg1STQ" name="Send Robots Home">
                   <doActivity xmi:type="uml:Activity" xmi:id="_dT_E0DQzEeijfafWEg1STQ" name="pushTask"/>
                 </subvertex>
                 <subvertex xmi:type="uml:FinalState" xmi:id="_yuDZsDQzEeijfafWEg1STQ" name=""/>
-                <subvertex xmi:type="uml:State" xmi:id="_OIfVkDQ0EeijfafWEg1STQ" name="Map gridpoint as obstacle">
+                <subvertex xmi:type="uml:State" xmi:id="_OIfVkDQ0EeijfafWEg1STQ" name="Map obstacle">
                   <doActivity xmi:type="uml:Activity" xmi:id="_Z4c8oDQ0EeijfafWEg1STQ" name="setGridPointStatus"/>
                 </subvertex>
-                <subvertex xmi:type="uml:State" xmi:id="_cqoJUDQ0EeijfafWEg1STQ" name="Set gridPointStatus to covered">
+                <subvertex xmi:type="uml:State" xmi:id="_cqoJUDQ0EeijfafWEg1STQ" name="Cover gridpoint">
                   <doActivity xmi:type="uml:Activity" xmi:id="_s9XYADQ0EeijfafWEg1STQ" name="saveImage"/>
                   <entry xmi:type="uml:Activity" xmi:id="_rhG1YDQ0EeijfafWEg1STQ" name="setGridPointStatus"/>
                 </subvertex>
@@ -583,9 +584,7 @@
                 <subvertex xmi:type="uml:FinalState" xmi:id="_CNEP8DQ1EeijfafWEg1STQ"/>
                 <subvertex xmi:type="uml:FinalState" xmi:id="_Cf2pEDQ1EeijfafWEg1STQ"/>
                 <subvertex xmi:type="uml:State" xmi:id="_tYINsDS-EeioEPqoYCkO6Q" name="Process information">
-                  <doActivity xmi:type="uml:Activity" xmi:id="_1mhygDS-EeioEPqoYCkO6Q" name="saveImage"/>
-                  <entry xmi:type="uml:Activity" xmi:id="_yuYgsDS-EeioEPqoYCkO6Q" name="set gridPointStatus to covered"/>
-                  <exit xmi:type="uml:Activity" xmi:id="_Dju3wDTAEeioEPqoYCkO6Q" name="give robot directions"/>
+                  <doActivity xmi:type="uml:Activity" xmi:id="_XixT4DTSEeidML-dro784g" name="give directions to Robot"/>
                 </subvertex>
               </region>
             </subvertex>
