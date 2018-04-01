@@ -30,6 +30,7 @@ by robot for the first time.&#xD;
     <packagedElement xmi:type="uml:UseCase" xmi:id="_znnXwBcPEei7ipzadJJ7oA" name="Stop mission">
       <include xmi:type="uml:Include" xmi:id="_f-jJoBcTEei7ipzadJJ7oA" addition="_o2msQBcPEei7ipzadJJ7oA"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_vo6qADQNEeiRS_tKdZLHAQ" name="Stop Rovu "/>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_4kPp0BcPEei7ipzadJJ7oA" name="Operator"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_54aAYBcPEei7ipzadJJ7oA" memberEnd="_54ancRcPEei7ipzadJJ7oA _54anchcPEei7ipzadJJ7oA">
@@ -60,5 +61,12 @@ by robot for the first time.&#xD;
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_zV-DYBlaEeilEZtsbGMLeA" name="map grid point" type="_s8HJEBcPEei7ipzadJJ7oA" association="_zV2uoBlaEeilEZtsbGMLeA"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_zV-qcBlaEeilEZtsbGMLeA" name="central station" type="_6VRikBcPEei7ipzadJJ7oA" association="_zV2uoBlaEeilEZtsbGMLeA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_KDtt0DQOEeiRS_tKdZLHAQ" memberEnd="_KD4F4DQOEeiRS_tKdZLHAQ _KD4s8DQOEeiRS_tKdZLHAQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KD0bgDQOEeiRS_tKdZLHAQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KD1poDQOEeiRS_tKdZLHAQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_KD4F4DQOEeiRS_tKdZLHAQ" name="stop rovu " type="_vo6qADQNEeiRS_tKdZLHAQ" association="_KDtt0DQOEeiRS_tKdZLHAQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_KD4s8DQOEeiRS_tKdZLHAQ" name="operator" type="_4kPp0BcPEei7ipzadJJ7oA" association="_KDtt0DQOEeiRS_tKdZLHAQ"/>
   </packagedElement>
 </uml:Model>

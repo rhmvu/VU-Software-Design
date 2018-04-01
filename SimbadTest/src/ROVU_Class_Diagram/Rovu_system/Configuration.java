@@ -45,17 +45,14 @@ public class Configuration{
 
 	private JFrame frame;
 	private JPanel panel;
-	private JLabel arches;
 	private JLabel boxes;
 	private JLabel robots;
-	private JComboBox<String> acb;
 	private JComboBox<String> bcb;
 	private JComboBox<String> rcb;
 	private JButton start;
 	private JButton stop;
 	private File directory;
 	
-	private int nOfArches;
 	private int nOfBoxes;
 	private int nOfRobots;
 	
@@ -159,7 +156,7 @@ public class Configuration{
 				// request antialising so that diagonal lines are not "stairy"
 		        System.setProperty("j3d.implicitAntialiasing", "true");
 		        
-		        environment = new Environment(nOfArches, nOfBoxes, nOfRobots);
+		        environment = new Environment(nOfBoxes, nOfRobots);
 		        
 		        Simbad simframe = new Simbad(environment, false);
 		        simframe.update(simframe.getGraphics());	
