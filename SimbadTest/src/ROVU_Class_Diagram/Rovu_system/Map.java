@@ -9,7 +9,7 @@ import ROVU_Class_Diagram.Rovu_system.GridPoint;
 import ROVU_Class_Diagram.Rovu_system.GridPointStatus;
 import javax.vecmath.Vector3d;
 
-import org.omg.CORBA.OBJ_ADAPTER;
+
 
 
 public class Map {
