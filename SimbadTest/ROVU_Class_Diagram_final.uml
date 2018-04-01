@@ -522,9 +522,8 @@
             <transition xmi:type="uml:Transition" xmi:id="_MnG1oDQkEeijfafWEg1STQ" source="_A-QjMDQkEeijfafWEg1STQ" target="_LAfdIDQkEeijfafWEg1STQ"/>
             <transition xmi:type="uml:Transition" xmi:id="_lCizUDQwEeijfafWEg1STQ" name="new task &quot;turn left&quot;" source="_3Ft08DQcEeigh_GIhwZp0g" target="_S-AxgDQdEeigh_GIhwZp0g"/>
             <transition xmi:type="uml:Transition" xmi:id="_l5C9gDQwEeijfafWEg1STQ" source="_S-AxgDQdEeigh_GIhwZp0g" target="_3Ft08DQcEeigh_GIhwZp0g"/>
-            <transition xmi:type="uml:Transition" xmi:id="_0RH2UDQwEeijfafWEg1STQ" name="obstacle detected [wallFollowing = true]" source="_3Ft08DQcEeigh_GIhwZp0g" target="_uNguEDQwEeijfafWEg1STQ"/>
-            <transition xmi:type="uml:Transition" xmi:id="_4Z9T8DQwEeijfafWEg1STQ" name="obstacle in front and left" source="_uNguEDQwEeijfafWEg1STQ" target="_ccW7QDQdEeigh_GIhwZp0g"/>
-            <transition xmi:type="uml:Transition" xmi:id="_6Sp68DQwEeijfafWEg1STQ" name="obstacle in front and right" source="_uNguEDQwEeijfafWEg1STQ" target="_S-AxgDQdEeigh_GIhwZp0g"/>
+            <transition xmi:type="uml:Transition" xmi:id="_M723IDWkEeiS9Ox6uhp9og" name="no obstacle on right of robot" source="_3Ft08DQcEeigh_GIhwZp0g" target="_ccW7QDQdEeigh_GIhwZp0g"/>
+            <transition xmi:type="uml:Transition" xmi:id="_PPS5YDWkEeiS9Ox6uhp9og" name="obstacle in front of robot" source="_3Ft08DQcEeigh_GIhwZp0g" target="_S-AxgDQdEeigh_GIhwZp0g"/>
             <subvertex xmi:type="uml:State" xmi:id="_S-AxgDQdEeigh_GIhwZp0g" name="Turn Left">
               <doActivity xmi:type="uml:Activity" xmi:id="_Y6UX4DQdEeigh_GIhwZp0g" name="turnLeft"/>
             </subvertex>
@@ -539,7 +538,6 @@
               <entry xmi:type="uml:Activity" xmi:id="__cNkkDTGEeioEPqoYCkO6Q" name="moveToStartPosition"/>
             </subvertex>
             <subvertex xmi:type="uml:FinalState" xmi:id="_LAfdIDQkEeijfafWEg1STQ"/>
-            <subvertex xmi:type="uml:Pseudostate" xmi:id="_uNguEDQwEeijfafWEg1STQ" name="" kind="choice"/>
           </region>
         </subvertex>
         <subvertex xmi:type="uml:FinalState" xmi:id="_3ZuJgDQxEeijfafWEg1STQ" name=""/>
@@ -554,7 +552,7 @@
         <subvertex xmi:type="uml:State" xmi:id="_fCiGwDQyEeijfafWEg1STQ" name="Monitor">
           <region xmi:type="uml:Region" xmi:id="_ukYrETQyEeijfafWEg1STQ" name="Region1">
             <transition xmi:type="uml:Transition" xmi:id="_m-bw4DQzEeijfafWEg1STQ" name="Receiving report from robot" source="_y8BZsDQyEeijfafWEg1STQ" target="_O92swDQzEeijfafWEg1STQ"/>
-            <transition xmi:type="uml:Transition" xmi:id="_gKCaADQ1EeijfafWEg1STQ" source="_O92swDQzEeijfafWEg1STQ" target="_eL7HgDQ1EeijfafWEg1STQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_RdaBoDWiEeiS9Ox6uhp9og" source="_O92swDQzEeijfafWEg1STQ" target="_y8BZsDQyEeijfafWEg1STQ"/>
             <subvertex xmi:type="uml:Pseudostate" xmi:id="_y8BZsDQyEeijfafWEg1STQ" name=""/>
             <subvertex xmi:type="uml:State" xmi:id="_O92swDQzEeijfafWEg1STQ" name="Handle Report">
               <region xmi:type="uml:Region" xmi:id="_UL9wYjQzEeijfafWEg1STQ" name="Region1">
@@ -587,7 +585,6 @@
                 <subvertex xmi:type="uml:FinalState" xmi:id="_4lAyQDWBEeikW-dg2jI89Q" name=""/>
               </region>
             </subvertex>
-            <subvertex xmi:type="uml:FinalState" xmi:id="_eL7HgDQ1EeijfafWEg1STQ"/>
           </region>
         </subvertex>
         <subvertex xmi:type="uml:FinalState" xmi:id="_h0DEwDQ1EeijfafWEg1STQ" name="stop button pressed"/>
