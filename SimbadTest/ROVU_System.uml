@@ -133,7 +133,7 @@ by robot for the first time.&#xD;
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_boDoIDQrEeirYo_nbsYNJw" name="Message1SendEvent" message="_boDBEDQrEeirYo_nbsYNJw"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_boDoITQrEeirYo_nbsYNJw" name="Message1ReceiveEvent" message="_boDBEDQrEeirYo_nbsYNJw"/>
     <fragment xmi:type="uml:CombinedFragment" xmi:id="_PYgd4DQyEeirYo_nbsYNJw" name="CombinedFragment1">
-      <operand xmi:type="uml:InteractionOperand" xmi:id="_PYhsADQyEeirYo_nbsYNJw" name="InteractionOperand1" covered="_VD2YcDQkEeirYo_nbsYNJw _e7sAQDQkEeirYo_nbsYNJw _gEW4gDQkEeirYo_nbsYNJw">
+      <operand xmi:type="uml:InteractionOperand" xmi:id="_PYhsADQyEeirYo_nbsYNJw" name="InteractionOperand1" covered="_VD2YcDQkEeirYo_nbsYNJw _gEW4gDQkEeirYo_nbsYNJw _e7sAQDQkEeirYo_nbsYNJw">
         <guard xmi:type="uml:InteractionConstraint" xmi:id="_PYhsATQyEeirYo_nbsYNJw" name="guard"/>
       </operand>
     </fragment>
@@ -197,5 +197,12 @@ by robot for the first time.&#xD;
     <message xmi:type="uml:Message" xmi:id="_oBhzUDQ4EeirYo_nbsYNJw" name="Create" messageSort="asynchCall" receiveEvent="_oBjBcDQ4EeirYo_nbsYNJw" sendEvent="_oBiaYDQ4EeirYo_nbsYNJw"/>
     <message xmi:type="uml:Message" xmi:id="_31IO8DQ4EeirYo_nbsYNJw" name="Start" messageSort="asynchCall" receiveEvent="_31KEIDQ4EeirYo_nbsYNJw" sendEvent="_31JdEDQ4EeirYo_nbsYNJw"/>
     <message xmi:type="uml:Message" xmi:id="_j8lwsDRYEeilkZ1r1KSWNA" name="Task: sendCoordinatesWithInterval" messageSort="asynchCall" receiveEvent="_j8uTkDRYEeilkZ1r1KSWNA" sendEvent="_j8tsgDRYEeilkZ1r1KSWNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_H3rtoDXbEeijnqRvIGsq4w" name="70% coverage">
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_M2qJEDXbEeijnqRvIGsq4w" name="Central Station" coveredBy="_nFHaADXbEeijnqRvIGsq4w"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_OZfNwDXbEeijnqRvIGsq4w" name="Robot" coveredBy="_nFHaATXbEeijnqRvIGsq4w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_nFHaADXbEeijnqRvIGsq4w" name="Message1SendEvent" covered="_M2qJEDXbEeijnqRvIGsq4w" message="_nFBTYDXbEeijnqRvIGsq4w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_nFHaATXbEeijnqRvIGsq4w" name="Message1ReceiveEvent" covered="_OZfNwDXbEeijnqRvIGsq4w" message="_nFBTYDXbEeijnqRvIGsq4w"/>
+    <message xmi:type="uml:Message" xmi:id="_nFBTYDXbEeijnqRvIGsq4w" name="Task: goHome" messageSort="asynchCall" receiveEvent="_nFHaATXbEeijnqRvIGsq4w" sendEvent="_nFHaADXbEeijnqRvIGsq4w"/>
   </packagedElement>
 </uml:Model>
